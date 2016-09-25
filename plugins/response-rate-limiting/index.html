@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+  
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Plugins - Response Rate Limiting | Kong - Open-Source API Management and Microservice Management</title>
+  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="author" content="Mashape"/>
+  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:site_name" content="Kong"/>
+  <!-- use share link for facebook -->
+  <meta property="og:url" content="http://getkong.org"/>
+  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@mashape"/>
+  <meta name="twitter:creator" content="@mashape"/>
+  <meta name="twitter:url" content="https://getkong.org"/>
+  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
+  <meta property="fb:admins" content="227304446"/>
+  <meta property="fb:admins" content="576641408"/>
+  <meta name="google-site-verification" content="CrU3zp02dNKTe8NSAipL4NCPkrIjDXG8fViTZ-MIzP4"/>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Mashape",
+      "url": "https://getkong.org",
+      "logo": "https://getkong.org/assets/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/Mashape",
+        "https://twitter.com/mashape",
+        "https://plus.google.com/+mashape"
+      ]
+    }
+  </script>
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="//cloud.typography.com/7506032/804186/css/fonts.css"/>
+  <link rel="stylesheet" href="/assets/styles.css?v=1474440736"/>
+</head>
+
+
+  <body id="page-plugin" >
+    <header class="site-header">
+  <div class="enterprise">
+    <div class="container">
+      <nav class="enterprise-sites one-half column">
+        <ul>
+          <li class="active"><a href="http://getkong.org">Kong</a></li>
+          <li><a href="http://gelato.io">Gelato</a></li>
+          <li><a href="http://getgalileo.io">Galileo</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+        </ul>
+      </nav>
+      <nav class="enterprise-contact one-half column">
+        <ul>
+          <li><a href="https://www.mashape.com/enterprise/#demo-form">Request Demo</a></li>
+          <li><a href="tel:+18664021473">Sales: +1 (866) 402-1473</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div><!-- .enterprise -->
+  <div class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand"><img src="/assets/images/branding.svg" alt="Kong" width="99" height="32"></a>
+      <iframe class="header-star" src="https://ghbtns.com/github-btn.html?user=Mashape&amp;repo=kong&amp;type=star"frameborder="0" scrolling="0" width="55" height="20"></iframe>
+      <button data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar" class="navbar-toggle">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <nav id="navbar" class="navbar-nav">
+        <ul>
+          <li><a href="/about/" >About</a></li>
+          <li><a href="/docs/" >Docs</a></li>
+          <li><a href="/plugins/" >Plugins</a></li>
+          <li><a href="/community/" >Community</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
+          <li>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div><!-- .navbar -->
+</header>
+
+
+    <div class="page page-plugin">
+  
+  <header class="page-header">
+    <div class="container">
+      
+        <div class="page-header-icon">
+          <img src="/assets/images/icons/plugins/response-rate-limiting.png" alt="" />
+        </div>
+      
+
+      <div class="page-header-title">
+        
+          <ul class="breadcrumbs">
+            
+              <li class="breadcrumb-item"><a href="/plugins">Plugins</a></li>
+            
+          </ul>
+        
+
+        <h1>Response Rate Limiting</h1>
+
+        
+      </div>
+
+      
+        <div class="page-header-right">
+          <a class="page-header-btn" href="mailto:support@mashape.com?subject=Response Rate Limiting Plugin Bug" target="_blank">Report Bug</a>
+        </div>
+      
+
+      
+    </div>
+  </header>
+
+
+
+  <div class="container">
+    <aside class="page-navigation">
+
+      
+        <nav>
+          
+            <h5>Getting Started</h5>
+          
+
+          <ul>
+            
+              <li>
+                <a href="#configuration">Configuration</a>
+
+                
+              </li>
+            
+          </ul>
+        </nav>
+      
+        <nav>
+          
+            <h5>Usage</h5>
+          
+
+          <ul>
+            
+              <li>
+                <a href="#configuring-quotas">Configuring Quotas</a>
+
+                
+              </li>
+            
+              <li>
+                <a href="#headers-sent-to-the-client">Headers sent to the client</a>
+
+                
+              </li>
+            
+              <li>
+                <a href="#upstream-headers">Upstream Headers</a>
+
+                
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </aside>
+
+    <div class="page-content-container">
+      <div class="page-content">
+        <div class="content">
+          <p>This plugin allows you to limit the number of requests a developer can make based on a custom response header returned by the upstream API. You can arbitrary set as many rate-limiting objects (or quotas) as you want and instruct Kong to increase or decrease them by any number of units. Each custom rate-limiting object can limit the inbound requests per seconds, minutes, hours, days, months or years.</p>
+
+<p>If the API has no authentication layer, the <strong>Client IP</strong> address will be used, otherwise the Consumer will be used if an authentication plugin has been configured.</p>
+
+<hr>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Configuring the plugin is straightforward, you can add it on top of an <a href="/docs/latest/admin-api/#api-object">API</a> (or <a href="/docs/latest/admin-api/#consumer-object">Consumer</a>) by executing the following request on your Kong server:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/apis/<span class="o">{</span>api<span class="o">}</span>/plugins <span class="se">\</span>
+    --data <span class="s2">&quot;name=response-ratelimiting&quot;</span> <span class="se">\</span>
+    --data <span class="s2">&quot;config.limits.{limit_name}.minute=10&quot;</span>
+</code></pre></div>
+<p><code>api</code>: The <code>id</code> or <code>name</code> of the API that this plugin configuration will target</p>
+
+<p>You can also apply it for every API using the <code>http://kong:8001/plugins/</code> endpoint. Read the <a href="/docs/latest/admin-api/#add-plugin">Plugin Reference</a> for more information.</p>
+
+<table><thead>
+<tr>
+<th>form parameter</th>
+<th>default</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>name</code></td>
+<td></td>
+<td>The name of the plugin to use, in this case: <code>response-ratelimiting</code></td>
+</tr>
+<tr>
+<td><code>consumer_id</code><br><em>optional</em></td>
+<td></td>
+<td>The CONSUMER ID that this plugin configuration will target. This value can only be used if <a href="/about/faq/#how-can-i-add-an-authentication-layer-on-a-microservice/api?">authentication has been enabled</a> so that the system can identify the user making the request.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}</code></td>
+<td></td>
+<td>This is a list of custom objects that you can set on the API, with arbitrary names set in the <code>{limit_name</code>} placeholder, like <code>config.limits.sms.minute=20</code> if your object is called &quot;SMS&quot;.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.second</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per second. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.minute</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per minute. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.hour</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per hour. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.day</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per day. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.month</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per month. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.limits.{limit_name}.year</code><br><em>semi-optional</em></td>
+<td></td>
+<td>The amount of HTTP requests the developer can make per year. At least one limit must exist.</td>
+</tr>
+<tr>
+<td><code>config.header_name</code><br><em>optional</em></td>
+<td><code>X-Kong-Limit</code></td>
+<td>The name of the response header used to increment the counters.</td>
+</tr>
+<tr>
+<td><code>config.block_on_first_violation</code><br><em>optional</em></td>
+<td><code>false</code></td>
+<td>A boolean value that determines if the requests should be blocked as soon as one limit is being exceeded. This will block requests that are supposed to consume other limits too.</td>
+</tr>
+<tr>
+<td><code>config.limit_by</code><br><em>optional</em></td>
+<td><code>consumer</code></td>
+<td>The entity that will be used when aggregating the limits: <code>consumer</code>, <code>credential</code>, <code>ip</code>. If the <code>consumer</code> or the <code>credential</code> cannot be determined, the system will always fallback to <code>ip</code>.</td>
+</tr>
+<tr>
+<td><code>config.policy</code><br><em>optional</em></td>
+<td><code>cluster</code></td>
+<td>The rate-limiting policies to use for retrieving and incrementing the limits. Available values are <code>local</code> (counters will be stored locally in-memory on the node), <code>cluster</code> (counters are stored in the datastore and shared across the nodes) and <code>redis</code> (counters are stored on a Redis server and will be shared across the nodes).</td>
+</tr>
+<tr>
+<td><code>config.fault_tolerant</code><br><em>optional</em></td>
+<td><code>true</code></td>
+<td>A boolean value that determines if the requests should be proxied even if Kong has troubles connecting a third-party datastore. If <code>true</code> requests will be proxied anyways effectively disabling the rate-limiting function until the datastore is working again. If <code>false</code> then the clients will see <code>500</code> errors.</td>
+</tr>
+<tr>
+<td><code>config.redis_host</code><br><em>semi-optional</em></td>
+<td></td>
+<td>When using the <code>redis</code> policy, this property specifies the address to the Redis server.</td>
+</tr>
+<tr>
+<td><code>config.redis_port</code><br><em>optional</em></td>
+<td><code>6379</code></td>
+<td>When using the <code>redis</code> policy, this property specifies the port of the Redis server.</td>
+</tr>
+<tr>
+<td><code>config.redis_timeout</code><br><em>optional</em></td>
+<td><code>2000</code></td>
+<td>When using the <code>redis</code> policy, this property specifies the timeout in milliseconds of any command submitted to the Redis server.</td>
+</tr>
+</tbody></table>
+
+<hr>
+
+<h2 id="configuring-quotas">Configuring Quotas</h2>
+
+<p>After adding the plugin, you can increment the configured limits by adding the following response header:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Header-Name: Limit=Value [,Limit=Value]
+</code></pre></div>
+<p>Since <code>X-Kong-Limit</code> is the default header name (you can optionally change it), it will look like:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">X-Kong-Limit: limitname1=2, limitname2=4
+</code></pre></div>
+<p>That will increment the limit <code>limitname1</code> by 2 units, and <code>limitname2</code> by 4 units.</p>
+
+<p>You can optionally increment more than one limit by comma separating the entries. The header will be removed before returning the response to the original client.</p>
+
+<hr>
+
+<h2 id="headers-sent-to-the-client">Headers sent to the client</h2>
+
+<p>When this plugin is enabled, Kong will send some additional headers back to the client telling how many units are available and how many are allowed. For example if you created a limit/quota called &quot;Videos&quot; with a per-minute limit:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">X-RateLimit-Limit-Videos-Minute: 10
+X-RateLimit-Remaining-Videos-Minute: 9
+</code></pre></div>
+<p>or it will return a combination of more time limits, if more than one is being set:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">X-RateLimit-Limit-Videos-Second: 5
+X-RateLimit-Remaining-Videos-Second: 5
+X-RateLimit-Limit-Videos-Minute: 10
+X-RateLimit-Remaining-Videos-Minute: 10
+</code></pre></div>
+<p>If any of the limits configured is being reached, the plugin will return a <code>HTTP/1.1 429</code> status code and an empty body.</p>
+
+<h3 id="upstream-headers">Upstream Headers</h3>
+
+<p>The plugin will append the usage headers for each limit before proxying it to the upstream API/Microservice, so that you can properly refuse to process the request if there are no more limits remaining. The headers are in the form of <code>X-RateLimit-Remaining-{limit_name}</code>, like:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">X-RateLimit-Remaining-Videos: 3
+X-RateLimit-Remaining-Images: 0
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer">
+  
+    <section class="section subscribe-section" id="newsletter">
+  <div class="container">
+    <header class="section-header">
+      <h4>Keep up with the latest features</h4>
+    </header>
+
+
+    <form action="/" class="subscribe-form">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+
+      <div class="alert alert-success" role="alert">Thank You!</div>
+
+      <div class="input-group">
+        <input type="email" name="email" placeholder="youre@awesome.com" required/>
+        <button class="button button-primary" type="submit">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+  
+
+  <div class="footer-bar">
+    <div class="container">
+      <ul class="footer-social">
+        <li>
+          <!-- verse link.web with link.share in the header -->
+          <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
+        </li>
+        <li>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getkong.org" data-text="KONG - the open-source management layer for APIs and Microservices" data-hashtags="opensource,API,management">Tweet</a>
+        </li>
+        <li>
+          <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
+        </li>
+      </ul>
+    <span>
+      <a href="https://mashape.com">
+        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
+        &copy; <strong>2016 Mashape Inc</strong>
+      </a>
+    </span>
+      <span class="footer-separator"></span>
+      <span class="footer-nav">
+        <a href="/license">License</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
+        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/app.js?v=1474440736"></script>
+
+    <div id="fb-root"></div>
+
+    <a id="support-bubble" href="https://gitter.im/Mashape/kong" class="js-gitter-toggle-chat-button" data-gitter-toggle-chat-state="true"></a>
+
+    <script id="github-bjs" src="https://buttons.github.io/buttons.js" async defer></script>
+    <script id="twitter-wjs" type="text/javascript" src="https://platform.twitter.com/widgets.js" async defer></script>
+    <script id="facebook-jssdk" type="text/javascript" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=842731852424506" async defer></script>
+
+    <script type='text/javascript'>
+      var _vwo_code=(function(){
+      var account_id=125292,
+      settings_tolerance=2000,
+      library_tolerance=2500,
+      use_existing_jquery=true,
+      // DO NOT EDIT BELOW THIS LINE
+      f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+    </script>
+
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+        analytics.load("WDj0nSS7hpyxwL3evgbOzK755s0NUye6");
+        analytics.page()
+      }}();
+    </script>
+
+    <script type="text/javascript" src="//mashape.github.io/notification-bar/embed.js" async defer></script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  </body>
+</html>

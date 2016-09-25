@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://getkong.org/sitemap.xml

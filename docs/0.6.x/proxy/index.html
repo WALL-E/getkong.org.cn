@@ -106,7 +106,13 @@
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           
+          
+          
           Version 0.6.x
+          
+          
+          
+          
           
           
           
@@ -119,7 +125,13 @@
               <li>
                 <a href="/docs/0.2.0-2">
                   
+                  
+                  
                   0.2.0-2
+                  
+                
+                  
+                
                   
                 
                   
@@ -131,7 +143,13 @@
               <li>
                 <a href="/docs/0.2.x">
                   
+                  
+                  
                   0.2.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -143,7 +161,13 @@
               <li>
                 <a href="/docs/0.3.x">
                   
+                  
+                  
                   0.3.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -155,7 +179,13 @@
               <li>
                 <a href="/docs/0.4.x">
                   
+                  
+                  
                   0.4.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -167,7 +197,13 @@
               <li>
                 <a href="/docs/0.5.x">
                   
+                  
+                  
                   0.5.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -181,7 +217,13 @@
               <li>
                 <a href="/docs/0.7.x">
                   
+                  
+                  
                   0.7.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -193,7 +235,13 @@
               <li>
                 <a href="/docs/0.8.x">
                   
+                  
+                  
                   0.8.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -205,8 +253,12 @@
               <li>
                 <a href="/docs/0.9.x">
                   
+                  
+                  
                   0.9.x
                   (latest)
+                
+                
                 
                 </a>
               </li>
@@ -231,7 +283,7 @@
         
         
         <li>
-          <a href="/docs/0.6.x/getting-started/introduction" >Introduction</a>
+          <a href="/docs/0.6.x/getting-started/introduction" >简介</a>
           
         </li>
         
@@ -306,7 +358,7 @@
             
             
             <li>
-              <a href="/docs/0.6.x/plugin-development" >Introduction</a>
+              <a href="/docs/0.6.x/plugin-development" >简介</a>
             </li>
             
             
@@ -560,6 +612,8 @@
         <div class="alert alert-warning">
           <strong>Careful!</strong> You are browsing documentation for an outdated version of Kong. Go <a href="/docs/latest">here</a> to browse the documentation for the latest version.
         
+        
+        
         </div>
         
 
@@ -613,6 +667,8 @@
 <div class="alert alert-warning">
   <strong>Note:</strong> For performance reasons, Kong keeps a cache of the APIs from your Cassandra cluster in memory for up to 60 seconds. As cache invalidation has not been implemented yet, Kong might take up to <strong>60 seconds</strong> to notice a new API and proxy incoming requests to it.
 
+
+
 </div>
 
 <hr>
@@ -648,6 +704,8 @@
 
 <div class="alert alert-warning">
   <strong>Going to production:</strong> If you're planning to go into production with your setup, you'll most likely not want your consumers to manually set the "<strong>Host</strong>" header on each request. You can let Kong and DNS take care of it by simply setting an A or CNAME record on your domain pointing to your Kong installation. Hence, any request made to `example.org` will already contain a `Host: example.org` header.
+
+
 
 </div>
 
@@ -751,6 +809,10 @@
 
 
 
+
+
+
+
 <ul>
 <li>a. A key authentication Plugin Configuration</li>
 <li>b. A rate-limiting Plugin Configuration (that also has a <code>consumer_id</code> property)</li>
@@ -759,10 +821,18 @@
 
 
 
+
+
+
+
 <ul>
 <li>a. User is now authenticated</li>
 </ul></li>
 <li>5. Kong tries to execute the rate-limiting plugin
+
+
+
+
 
 
 
@@ -801,7 +871,7 @@
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>
-        <button class="button button-primary" type="submit">Subscribe</button>
+        <button class="button button-primary" type="submit">订阅</button>
       </div>
     </form>
   </div>

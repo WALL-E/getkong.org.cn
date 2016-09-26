@@ -176,6 +176,8 @@
 <div class="alert alert-warning">
   <strong>Note on transforming bodies:</strong> Be aware of the performamce of transformations on the response body. In order to parse and modify a JSON body, the plugin needs to retain it in memory, which might cause pressure on the worker's Lua VM when dealing with large bodies (several MBs). Because of Nginx's internals, the `Content-Length` header will not be set when transforming a response body.
 
+
+
 </div>
 
 <hr>
@@ -433,7 +435,7 @@
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>
-        <button class="button button-primary" type="submit">Subscribe</button>
+        <button class="button button-primary" type="submit">订阅</button>
       </div>
     </form>
   </div>

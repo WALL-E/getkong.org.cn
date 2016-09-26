@@ -106,7 +106,13 @@
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           
+          
+          
           Version 0.7.x
+          
+          
+          
+          
           
           
           
@@ -119,7 +125,13 @@
               <li>
                 <a href="/docs/0.2.0-2">
                   
+                  
+                  
                   0.2.0-2
+                  
+                
+                  
+                
                   
                 
                   
@@ -131,7 +143,13 @@
               <li>
                 <a href="/docs/0.2.x">
                   
+                  
+                  
                   0.2.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -143,7 +161,13 @@
               <li>
                 <a href="/docs/0.3.x">
                   
+                  
+                  
                   0.3.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -155,7 +179,13 @@
               <li>
                 <a href="/docs/0.4.x">
                   
+                  
+                  
                   0.4.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -167,7 +197,13 @@
               <li>
                 <a href="/docs/0.5.x">
                   
+                  
+                  
                   0.5.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -179,7 +215,13 @@
               <li>
                 <a href="/docs/0.6.x">
                   
+                  
+                  
                   0.6.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -193,7 +235,13 @@
               <li>
                 <a href="/docs/0.8.x">
                   
+                  
+                  
                   0.8.x
+                  
+                
+                  
+                
                   
                 
                   
@@ -205,8 +253,12 @@
               <li>
                 <a href="/docs/0.9.x">
                   
+                  
+                  
                   0.9.x
                   (latest)
+                
+                
                 
                 </a>
               </li>
@@ -231,7 +283,7 @@
         
         
         <li>
-          <a href="/docs/0.7.x/getting-started/introduction" >Introduction</a>
+          <a href="/docs/0.7.x/getting-started/introduction" >简介</a>
           
         </li>
         
@@ -312,7 +364,7 @@
             
             
             <li>
-              <a href="/docs/0.7.x/plugin-development" >Introduction</a>
+              <a href="/docs/0.7.x/plugin-development" >简介</a>
             </li>
             
             
@@ -566,6 +618,8 @@
         <div class="alert alert-warning">
           <strong>Careful!</strong> You are browsing documentation for an outdated version of Kong. Go <a href="/docs/latest">here</a> to browse the documentation for the latest version.
         
+        
+        
         </div>
         
 
@@ -597,7 +651,7 @@
 </ul></li>
 </ul>
 
-<h2 id="1-introduction">1. Introduction</h2>
+<h2 id="1-introduction">1. 简介</h2>
 
 <p>Generally speaking having multiple Kong nodes is a good practice for a number of reasons, including:</p>
 
@@ -611,7 +665,7 @@
   <img src="/assets/images/docs/clustering.png" style="height: 400px"/>
 </center></p>
 
-<p>To make sure every Kong node can process requests properly, each node must point to the same datastore so that they can share the same data. This means for example that APIs, Consumers and Plugins created by a Kong node will also be available to other Kong nodes that are pointing to the same datastore.  </p>
+<p>To make sure every Kong node can process requests properly, each node must point to the same datastore so that they can share the same data. This means for example that APIs, Consumers and Plugins created by a Kong node will also be available to other Kong nodes that are pointing to the same datastore.    </p>
 
 <p>By doing so it doesn't matter which Kong node is being requested, as long as they all point to the same datastore every node will be able to retrieve the same data and thus process requests in the same way.</p>
 
@@ -631,7 +685,7 @@
 
 <p>To understand why a Kong Cluster is needed, we need to spend a few words on how Kong interacts with the datastore.</p>
 
-<p>Every time a new incoming API requests hits a Kong server, Kong loads some data from the datastore to understand how to proxy the request, load any associated plugin, authenticate the Consumer, and so on. Doing this on every request would be very expensive in terms of performance, because Kong would need to communicate with the datastore on every request and this would be extremely inefficient.  </p>
+<p>Every time a new incoming API requests hits a Kong server, Kong loads some data from the datastore to understand how to proxy the request, load any associated plugin, authenticate the Consumer, and so on. Doing this on every request would be very expensive in terms of performance, because Kong would need to communicate with the datastore on every request and this would be extremely inefficient.    </p>
 
 <p>To avoid querying the datastore every time, Kong tries to cache as much data as possible locally in-memory after the first time it has been requested. Because a local in-memory lookup is tremendously faster than communicating with the datastore every time, this allows Kong to have a good performance on every request.</p>
 
@@ -659,7 +713,7 @@
 
 <ul>
 <li>Using the <a href="/docs/0.7.x/cli/#cluster"><code>kong cluster force-leave</code></a> CLI command</li>
-<li>Using the <a href="/docs/0.7.x/admin-api/#forcibly-remove-a-node">API</a>.  </li>
+<li>Using the <a href="/docs/0.7.x/admin-api/#forcibly-remove-a-node">API</a>.    </li>
 </ul>
 
 <p>Check the <a href="#node-failures">Node Failures</a> paragraph for more info.</p>
@@ -731,7 +785,7 @@
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>
-        <button class="button button-primary" type="submit">Subscribe</button>
+        <button class="button button-primary" type="submit">订阅</button>
       </div>
     </form>
   </div>

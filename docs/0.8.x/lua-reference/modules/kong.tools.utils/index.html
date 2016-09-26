@@ -105,7 +105,13 @@
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           
+          
+          
           Version 0.8.x
+          
+          
+          
+          
           
           
           
@@ -151,7 +157,13 @@
                 
                   <a href="/docs/0.5.x/lua-reference/">
                     
+                    
+                    
                     0.5.x
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -165,7 +177,13 @@
                 
                   <a href="/docs/0.6.x/lua-reference/">
                     
+                    
+                    
                     0.6.x
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -179,7 +197,13 @@
                 
                   <a href="/docs/0.7.x/lua-reference/">
                     
+                    
+                    
                     0.7.x
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -195,8 +219,12 @@
                 
                   <a href="/docs/0.9.x/lua-reference/">
                     
+                    
+                    
                     0.9.x
                     (latest)
+                  
+                  
                   
                   </a>
                 
@@ -306,8 +334,14 @@
   </dt>
   <dd>
     
+    
+    
     Add an error message to a key/value table.
  If the key already exists, a sub table is created with the original and the new value.
+
+    
+
+    
 
     
 
@@ -317,15 +351,21 @@
           <code class="parameter">errors</code>
           (Optional) Table to attach the error to. If <code>nil</code>, the table will be created.
         
+        
+        
         </li>
         <li>
           <code class="parameter">k</code>
           Key on which to insert the error in the <code>errors</code> table.
         
+        
+        
         </li>
         <li>
           <code class="parameter">v</code>
           Value of the error
+        
+        
         
         </li>
     </ul>
@@ -334,7 +374,11 @@
     <ul>
       <li>
         
+        
+        
         The <code>errors</code> table with the new error inserted.
+      
+      
       
       </li>
     </ul>
@@ -350,7 +394,13 @@
   </dt>
   <dd>
     
+    
+    
     Concatenates lists into a new table.
+
+    
+
+    
 
     
 
@@ -374,8 +424,14 @@
   </dt>
   <dd>
     
+    
+    
     Deep copies a table into a new table.
  Tables used as keys are also deep copied, as are metatables
+
+    
+
+    
 
     
 
@@ -385,6 +441,8 @@
           <code class="parameter">orig</code>
           The table to copy
         
+        
+        
         </li>
     </ul>
 
@@ -392,7 +450,11 @@
     <ul>
       <li>
         
+        
+        
         Returns a copy of the input table
+      
+      
       
       </li>
     </ul>
@@ -408,10 +470,16 @@
   </dt>
   <dd>
     
+    
+    
     Encode a Lua table to a querystring
  Tries to mimic ngx_lua's <code>ngx.encode_args</code>, but also percent-encode querystring values.
  Supports multi-value query args, boolean values.
  It also supports encoding for bodies (only because it is used in http_client for specs.
+
+    
+
+    
 
     
 
@@ -422,11 +490,15 @@
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           A key/value table containing the query args to encode.
         
+        
+        
         </li>
         <li>
           <code class="parameter">raw</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, will not percent-encode any key/value and will ignore special boolean rules.
+        
+        
         
         </li>
     </ul>
@@ -436,6 +508,8 @@
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         A valid querystring (without the prefixing '?')
+      
+      
       
       </li>
     </ul>
@@ -454,7 +528,15 @@
   </dt>
   <dd>
     
+    
+    
     Retrieves the hostname of the local machine
+
+
+    
+
+
+    
 
 
     
@@ -464,7 +546,11 @@
     <ul>
       <li>
         
+        
+        
         string  The hostname
+      
+      
       
       </li>
     </ul>
@@ -480,8 +566,14 @@
   </dt>
   <dd>
     
+    
+    
     Checks if a table is an array and not an associative array.
  <strong>* NOTE *</strong> string-keys containing integers are considered valid array entries!
+
+    
+
+    
 
     
 
@@ -491,6 +583,8 @@
           <code class="parameter">t</code>
           The table to check
         
+        
+        
         </li>
     </ul>
 
@@ -498,7 +592,11 @@
     <ul>
       <li>
         
+        
+        
         Returns <code>true</code> if the table is an array, <code>false</code> otherwise
+      
+      
       
       </li>
     </ul>
@@ -514,9 +612,15 @@
   </dt>
   <dd>
     
+    
+    
     Try to load a module.
  Will not throw an error if the module was not found, but will throw an error if the
  loading failed for another reason (eg: syntax error).
+
+    
+
+    
 
     
 
@@ -526,6 +630,8 @@
           <code class="parameter">module_name</code>
           Path of the module to load (ex: kong.plugins.keyauth.api).
         
+        
+        
         </li>
     </ul>
 
@@ -533,12 +639,20 @@
     <ul>
       <li>
         
+        
+        
         success A boolean indicating wether the module was found.
+      
+      
       
       </li>
       <li>
         
+        
+        
         module The retrieved module.
+      
+      
       
       </li>
     </ul>
@@ -554,7 +668,15 @@
   </dt>
   <dd>
     
+    
+    
     Generates a random unique string
+
+
+    
+
+
+    
 
 
     
@@ -564,7 +686,11 @@
     <ul>
       <li>
         
+        
+        
         string  The random string (a uuid without hyphens)
+      
+      
       
       </li>
     </ul>
@@ -580,7 +706,13 @@
   </dt>
   <dd>
     
+    
+    
     Checks if a value exists in a table.
+
+    
+
+    
 
     
 
@@ -590,10 +722,14 @@
           <code class="parameter">arr</code>
           The table to use
         
+        
+        
         </li>
         <li>
           <code class="parameter">val</code>
           The value to check
+        
+        
         
         </li>
     </ul>
@@ -602,7 +738,11 @@
     <ul>
       <li>
         
+        
+        
         Returns <code>true</code> if the table contains the value, <code>false</code> otherwise
+      
+      
       
       </li>
     </ul>
@@ -618,8 +758,14 @@
   </dt>
   <dd>
     
+    
+    
     Merges two table together.
  A new table is created with a non-recursive copy of the provided tables
+
+    
+
+    
 
     
 
@@ -629,10 +775,14 @@
           <code class="parameter">t1</code>
           The first table
         
+        
+        
         </li>
         <li>
           <code class="parameter">t2</code>
           The second table
+        
+        
         
         </li>
     </ul>
@@ -641,7 +791,11 @@
     <ul>
       <li>
         
+        
+        
         The (new) merged table
+      
+      
       
       </li>
     </ul>
@@ -657,8 +811,14 @@
   </dt>
   <dd>
     
+    
+    
     Calculates a table size.
  All entries both in array and hash part.
+
+    
+
+    
 
     
 
@@ -668,6 +828,8 @@
           <code class="parameter">t</code>
           The table to use
         
+        
+        
         </li>
     </ul>
 
@@ -675,7 +837,11 @@
     <ul>
       <li>
         
+        
+        
         number The size
+      
+      
       
       </li>
     </ul>
@@ -714,7 +880,7 @@
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>
-        <button class="button button-primary" type="submit">Subscribe</button>
+        <button class="button button-primary" type="submit">订阅</button>
       </div>
     </form>
   </div>

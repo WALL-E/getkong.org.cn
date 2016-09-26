@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Install - AWS Cloud Formation | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Install - AWS Cloud Formation | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/" >Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/" >文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +106,7 @@
         
           <ul class="breadcrumbs">
             
-              <li class="breadcrumb-item"><a href="/install">Installation</a></li>
+              <li class="breadcrumb-item"><a href="/install">安装</a></li>
             
           </ul>
         
@@ -390,14 +391,14 @@
 <li><p><strong>Initial Setup</strong>:</p>
 
 <p>Create the required key pairs, one to access Kong instances and one for Cassandra if template povisioning a new Cassandra cluster. If you providing your own DB instances, make sure its accessible by Kong instances.
-If you want to create instances in existing VPC, VPC need to have two public subnet and all required ports open to allow access to Kong Load balancer. </p>
+If you want to create instances in existing VPC, VPC need to have two public subnet and all required ports open to allow access to Kong Load balancer.  </p>
 
 <p><em>Continue to next step if you want to use an existing key pair</em></p></li>
 <li><p><strong>Choose a Region &amp; VM Type</strong>:</p>
 
-<p>Choose the region closest to your API servers, and pick the virtualization type you&#39;d like from the list of available <a href="#templates">templates</a> above.</p>
+<p>Choose the region closest to your API servers, and pick the virtualization type you'd like from the list of available <a href="#templates">templates</a> above.</p>
 
-<p>You should land on AWS Cloud Formation <em>&quot;Select Template&quot;</em> page</p></li>
+<p>You should land on AWS Cloud Formation <em>"Select Template"</em> page</p></li>
 <li><p><strong>Parameters</strong>:</p>
 
 <p>Fill in all the parameters details. If you chose to launch Kong with Cassandra/Postgres you would be asked to fill in extra parameters to create a Cassandra cluster or Postgres RDS instance. 
@@ -408,19 +409,20 @@ check the description of each field and provide appropriate values.</p>
 
 <p>Add Tags and other fields according to your requirements.</p>
 
-<p><strong>Note:</strong> <em>The template is configured to add a &quot;Name&quot; tag to each relevant resource</em></p></li>
+<p><strong>Note:</strong> <em>The template is configured to add a "Name" tag to each relevant resource</em></p></li>
 <li><p><strong>Template Documentation</strong>:</p>
 
 <p>For more details on parameters and futher configuration options, please consult the <a href="https://github.com/Mashape/kong-dist-cloudformation">templates documentation on Github</a></p></li>
 <li><p><strong>Grab a Coffee!</strong>:</p>
 
-<p>It will take several minutes <em>(~20 minutes)</em> to create the stack. Once the stack has a status of <code>CREATE_COMPLETE</code>, click on <em>&quot;Output&quot;</em> tab to get the proxy and Admin URL, it may take <em>60 seconds</em> more for links to become active.</p>
+<p>It will take several minutes <em>(~20 minutes)</em> to create the stack. Once the stack has a status of <code>CREATE_COMPLETE</code>, click on <em>"Output"</em> tab to get the proxy and Admin URL, it may take <em>60 seconds</em> more for links to become active.</p>
 
-<p><strong>Note</strong>: <em>To monitor the progress go to AWS CloudFormation console, select the stack in the list. In the stack details pane, click the &quot;Events&quot; tab to see the progress.</em></p>
+<p><strong>Note</strong>: <em>To monitor the progress go to AWS CloudFormation console, select the stack in the list. In the stack details pane, click the "Events" tab to see the progress.</em></p>
 
 <div class="alert alert-warning">
   <div class="text-center">
     <strong>Note</strong>: Check out the <a href="https://github.com/Mashape/kong-dist-cloudformation">kong-dist-cloudformation</a> repository for further details.
+  
   </div>
 </div></li>
 <li><p><strong>Use Kong:</strong></p>
@@ -432,7 +434,7 @@ check the description of each field and provide appropriate values.</p>
           <hr/>
 
           <div class="help">
-            <img align="middle" src="/assets/images/icons/icn-lifesaver.svg"/> Having Trouble? <a href="/community/">We're Here to Help!</a>
+            <img align="middle" src="/assets/images/icons/icn-lifesaver.svg"/>  Having Trouble? <a href="/community/">We're Here to Help!</a>
           </div>
         </div>
       </div>
@@ -472,8 +474,8 @@ check the description of each field and provide appropriate values.</p>
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -483,20 +485,7 @@ check the description of each field and provide appropriate values.</p>
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

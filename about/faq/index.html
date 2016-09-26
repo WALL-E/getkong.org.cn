@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>FAQ | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>FAQ | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/"  class="active">About</a></li>
-          <li><a href="/docs/" >Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/"  class="active">关于</a></li>
+          <li><a href="/docs/" >文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +106,7 @@
         
           <ul class="breadcrumbs">
             
-              <li class="breadcrumb-item"><a href="/about">About</a></li>
+              <li class="breadcrumb-item"><a href="/about">关于</a></li>
             
           </ul>
         
@@ -130,14 +131,14 @@
   <div class="container">
     <aside class="page-navigation">
       <nav>
-        <h5>About</h5>
+        <h5>关于</h5>
         <ul>
           
             <li><a href="/about/" >What is Kong?</a></li>
           
             <li><a href="/about/who/" >Who is Using Kong?</a></li>
           
-            <li><a href="/about/advantages/" >Advantages & Use Cases</a></li>
+            <li><a href="/about/advantages/" >Advantages &amp; Use Cases</a></li>
           
             <li><a href="/about/pci-dss/" >PCI DSS Compliance</a></li>
           
@@ -189,10 +190,10 @@
 <p>A typical Kong setup is made of two main components:</p>
 
 <ul>
-<li><a href="#kong-server">Kong&#39;s server</a>, based on the widely adopted <strong>NGINX</strong> HTTP
-server, which is a reverse proxy processing your clients&#39; requests to your
+<li><a href="#kong-server">Kong's server</a>, based on the widely adopted <strong>NGINX</strong> HTTP
+server, which is a reverse proxy processing your clients' requests to your
 upstream services.</li>
-<li>Kong&#39;s datastore, in which the configuration is stored
+<li>Kong's datastore, in which the configuration is stored
 to allow you to horizontally scale Kong nodes.
 <a href="#apache-cassandra">Apache Cassandra</a> and <a href="#postgresql">PostgreSQL</a> can be
 used to fulfill this role.</li>
@@ -222,7 +223,7 @@ default:</p>
 production usage:</p>
 
 <ul>
-<li><code>8001</code> provides Kong&#39;s <strong>Admin API</strong> that you can use to operate Kong. See
+<li><code>8001</code> provides Kong's <strong>Admin API</strong> that you can use to operate Kong. See
 <a href="/docs/latest/configuration/#admin_api_listen">admin_api_listen</a>.</li>
 <li><code>7946</code> which Kong uses for inter-nodes communication with other Kong nodes. Both UDP and TCP traffic
 must be allowed. See <a href="/docs/latest/configuration/#cluster_listen">cluster_listen</a>.</li>
@@ -245,8 +246,8 @@ Consumer credentials.</p>
 <p><strong>Kong maintains a cache</strong> of this data so that there is no need for a database
 roundtrip while proxying requests, which would critically impact performance.
 This cache is invalidated by the inter-node communication when calls to the
-Admin API are made. As such, it is discouraged to manipulate Kong&#39;s datastore
-directly, since your nodes cache won&#39;t be properly invalidated.</p>
+Admin API are made. As such, it is discouraged to manipulate Kong's datastore
+directly, since your nodes cache won't be properly invalidated.</p>
 
 <p>This architecture allows Kong to scale horizontally by simply adding new nodes
 that will connect to the same datastore and maintain their own cache.</p>
@@ -263,7 +264,7 @@ architecture.</p>
 
 <p>Kong can use Cassandra as its primary datastore if you are aiming at a
 distributed, high-availability Kong setup. The two main reasons why one would
-chose Cassandra as Kong&#39;s datastore are:
+chose Cassandra as Kong's datastore are:
 - An ease to create a distributed setup (ideal for multi-region).
 - Ease to scale. Since Kong maintains its own cache, only plugins such as
   Rate-Limiting or Response-Rate-Limiting will require a highly responsive
@@ -283,8 +284,9 @@ and <a href="http://www.ecyrd.com/cassandracalculator/">this neat Replication Ca
 
 <div class="alert alert-warning">
   <strong>Note:</strong> If you don't want to
-  manage/scale your own Cassandra cluster, we suggest using <a href="https://www.instaclustr.com/products/kong/?utm_source=partnership&utm_medium=link&utm_campaign=mashape" target="_blank">Instaclustr</a> for Cassandra in
+  manage/scale your own Cassandra cluster, we suggest using <a href="https://www.instaclustr.com/products/kong/?utm_source=partnership&amp;utm_medium=link&amp;utm_campaign=mashape" target="_blank">Instaclustr</a> for Cassandra in
   the cloud.
+
 </div>
 
 <h3 id="postgresql">PostgreSQL</h3>
@@ -306,7 +308,7 @@ most use-cases, making PostgreSQL a good candidate for your Kong cluster too.</p
 <h2 id="how-does-it-scale">How does it scale?</h2>
 
 <p>When it comes to scaling Kong, you need to keep in mind that you will mostly
-need to scale Kong&#39;s server and eventually ensure its datastore is not a single
+need to scale Kong's server and eventually ensure its datastore is not a single
 point of failure in your infrastructure.</p>
 
 <h3 id="kong-server">Kong server</h3>
@@ -322,7 +324,7 @@ HTTP requests have been processed.</p>
 <h3 id="kong-datastore">Kong datastore</h3>
 
 <p>Scaling the datastore should not be your main concern, mostly because as
-mentioned before, Kong maintains its own cache, so expect your datastore&#39;s
+mentioned before, Kong maintains its own cache, so expect your datastore's
 traffic to be relatively quiet.</p>
 
 <p>However, keep it mind that it is always a good practise to ensure your
@@ -346,9 +348,9 @@ installed and configured via the Admin API running alongside Kong.</p>
 service, but also to target <strong>specific <a href="/docs/latest/admin-api/#consumer-object">Consumers</a></strong>.</p>
 
 <p>From a technical perspective, a plugin is <a href="http://www.lua.org/">Lua</a> code
-that&#39;s being executed during the life-cycle of a proxied request and response.
+that's being executed during the life-cycle of a proxied request and response.
 Through plugins, Kong can be extended to fit any custom need or integration
-challenge. For example, if you need to integrate the you API&#39;s user
+challenge. For example, if you need to integrate the you API's user
 authentication with a third-party enterprise security system, that would be
 implemented in a dedicated plugin that is run on every request targetting that
 given API.</p>
@@ -395,7 +397,7 @@ Gitter</a>. We are also on Freenode at
 
 <p><hr></p>
 
-<p>Were you looking for a question that you did&#39;t find? <a href="https://github.com/Mashape/kong">Open an issue!</a></p>
+<p>Were you looking for a question that you did't find? <a href="https://github.com/Mashape/kong">Open an issue!</a></p>
 </div>
       </div>
     </div>
@@ -434,8 +436,8 @@ Gitter</a>. We are also on Freenode at
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -445,20 +447,7 @@ Gitter</a>. We are also on Freenode at
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

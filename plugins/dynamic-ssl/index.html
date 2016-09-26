@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Plugins - Dynamic SSL | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Plugins - Dynamic SSL | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/" >Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/" >文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +106,7 @@
         
           <ul class="breadcrumbs">
             
-              <li class="breadcrumb-item"><a href="/plugins">Plugins</a></li>
+              <li class="breadcrumb-item"><a href="/plugins">插件</a></li>
             
           </ul>
         
@@ -182,10 +183,10 @@
 
 <p>Configuring the plugin is as simple as a single API call, you can configure and enable it for your <a href="/docs/latest/admin-api/#api-object">API</a> by executing the following request on your Kong server:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/apis/<span class="o">{</span>api<span class="o">}</span>/plugins <span class="se">\</span>
-    --form <span class="s2">&quot;name=ssl&quot;</span> <span class="se">\</span>
-    --form <span class="s2">&quot;config.cert=@/path/to/cert.pem&quot;</span> <span class="se">\</span>
-    --form <span class="s2">&quot;config.key=@/path/to/cert.key&quot;</span> <span class="se">\</span>
-    --form <span class="s2">&quot;config.only_https=true&quot;</span>
+    --form <span class="s2">"name=ssl"</span> <span class="se">\</span>
+    --form <span class="s2">"config.cert=@/path/to/cert.pem"</span> <span class="se">\</span>
+    --form <span class="s2">"config.key=@/path/to/cert.key"</span> <span class="se">\</span>
+    --form <span class="s2">"config.only_https=true"</span>
 </code></pre></div>
 <p><code>api</code>: The <code>id</code> or <code>name</code> of the API that this plugin configuration will target</p>
 
@@ -230,7 +231,7 @@
 <h2 id="creating-an-ssl-certificate">Creating an SSL certificate</h2>
 
 <p>When creating an SSL certificate to use with this plugin, make sure you create one that is compatible with nginx. There are different ways of getting an SSL certificate, below you can find some easy steps to create a self-signed certificate to use with this plugin:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Let&#39;s create the private server key</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Let's create the private server key</span>
 openssl genrsa -des3 -out server.key 1024
 
 <span class="c"># Now we create a certificate signing request</span>
@@ -249,9 +250,9 @@ openssl x509 -req -in server.csr -signkey server.key -out server.crt
 
 <h2 id="propagation">Propagation</h2>
 
-<p>When adding this plugin, the SSL certificate and its key will be uploaded and stored into the datastore, and they doesn&#39;t need to physically exist on the Kong servers. </p>
+<p>When adding this plugin, the SSL certificate and its key will be uploaded and stored into the datastore, and they doesn't need to physically exist on the Kong servers.  </p>
 
-<p>For example, if you have two Kong servers called &quot;Server_1&quot; and &quot;Server_2&quot;, this means that you can upload a certificate, let&#39;s say, on &quot;Server_1&quot; and it will be immediately available also on &quot;Server_2&quot; (and on any other server you decide to add to the cluster, as long as they point to the same datastore).</p>
+<p>For example, if you have two Kong servers called "Server_1" and "Server_2", this means that you can upload a certificate, let's say, on "Server_1" and it will be immediately available also on "Server_2" (and on any other server you decide to add to the cluster, as long as they point to the same datastore).</p>
 
         </div>
       </div>
@@ -291,8 +292,8 @@ openssl x509 -req -in server.csr -signkey server.key -out server.crt
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -302,20 +303,7 @@ openssl x509 -req -in server.csr -signkey server.key -out server.crt
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

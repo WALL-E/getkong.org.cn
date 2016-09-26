@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Plugin Development - Accessing the datastore - v0.5.x | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Plugin Development - Accessing the datastore - v0.5.x | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/"  class="active">Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/"  class="active">文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -104,7 +105,10 @@
     
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
           Version 0.5.x
+          
+          
           
           <span class="caret"></span>
         </button>
@@ -114,7 +118,10 @@
             
               <li>
                 <a href="/docs/0.2.0-2">
+                  
                   0.2.0-2
+                  
+                
                   
                 </a>
               </li>
@@ -123,7 +130,10 @@
             
               <li>
                 <a href="/docs/0.2.x">
+                  
                   0.2.x
+                  
+                
                   
                 </a>
               </li>
@@ -132,7 +142,10 @@
             
               <li>
                 <a href="/docs/0.3.x">
+                  
                   0.3.x
+                  
+                
                   
                 </a>
               </li>
@@ -141,7 +154,10 @@
             
               <li>
                 <a href="/docs/0.4.x">
+                  
                   0.4.x
+                  
+                
                   
                 </a>
               </li>
@@ -152,7 +168,10 @@
             
               <li>
                 <a href="/docs/0.6.x">
+                  
                   0.6.x
+                  
+                
                   
                 </a>
               </li>
@@ -161,7 +180,10 @@
             
               <li>
                 <a href="/docs/0.7.x">
+                  
                   0.7.x
+                  
+                
                   
                 </a>
               </li>
@@ -170,7 +192,10 @@
             
               <li>
                 <a href="/docs/0.8.x">
+                  
                   0.8.x
+                  
+                
                   
                 </a>
               </li>
@@ -179,8 +204,10 @@
             
               <li>
                 <a href="/docs/0.9.x">
+                  
                   0.9.x
                   (latest)
+                
                 </a>
               </li>
             
@@ -501,15 +528,17 @@
         
         <div class="alert alert-warning">
           <strong>Careful!</strong> You are browsing documentation for an outdated version of Kong. Go <a href="/docs/latest">here</a> to browse the documentation for the latest version.
+        
         </div>
         
 
       <h1 id="plugin-development-accessing-the-datastore">Plugin Development - Accessing the datastore</h1>
 
-<p>Kong interacts with the model layer through classes we refer to as &quot;DAOs&quot;. This chapter will detail the available API to interact with the datastore.</p>
+<p>Kong interacts with the model layer through classes we refer to as "DAOs". This chapter will detail the available API to interact with the datastore.</p>
 
 <div class="alert alert-warning">
   <strong>Note:</strong> Currently, Kong only supports <a href="http://cassandra.apache.org/">Cassandra</a> as its datastore. This guide assumes that you are already familiar with it and sometimes describes concepts only related to Cassandra, such as indexes and clustering keys.
+
 </div>
 
 <hr>
@@ -523,7 +552,7 @@
 <li>A child implementation of the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao">kong.dao.cassandra.base_dao</a> module, which consumes the schema exposing methods to insert, update, find and delete entities of that type. See the <a href="http://localhost:3000/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao/#Children_DAOs_interface">children DAOs interface</a>.</li>
 </ul>
 
-<p>The core entities in Kong are: Apis, Consumers and Plugins. Each of these entities can be interacted with through their corresponding DAO instance, available through the <strong>DAO Factory</strong> instance. The DAO Factory is responsible for loading these core entities&#39; DAOs as well as any additional entities, provided for example by plugins.</p>
+<p>The core entities in Kong are: Apis, Consumers and Plugins. Each of these entities can be interacted with through their corresponding DAO instance, available through the <strong>DAO Factory</strong> instance. The DAO Factory is responsible for loading these core entities' DAOs as well as any additional entities, provided for example by plugins.</p>
 
 <p>The DAO Factory is generally accessible from the <code>dao</code> global variable:</p>
 <div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">dao_factory</span> <span class="o">=</span> <span class="n">dao</span>
@@ -539,15 +568,15 @@
 
 <h3 id="daos-lua-api">DAOs Lua API</h3>
 
-<p>All methods available on DAOs are documented in the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao">kong.dao.cassandra.base_dao</a> module in Kong&#39;s Public Lua API Reference. See the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao/#Public_interface">public interface</a> and <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao/#Children_DAOs_interface">children DAOs interface</a> sections of the base_dao module.</p>
+<p>All methods available on DAOs are documented in the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao">kong.dao.cassandra.base_dao</a> module in Kong's Public Lua API Reference. See the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao/#Public_interface">public interface</a> and <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao/#Children_DAOs_interface">children DAOs interface</a> sections of the base_dao module.</p>
 
 <p>By extending the <code>base_dao</code> module, all DAOs have access to an abstraction on top of Cassandra, providing methods for inserting, updating, finding and deleting rows, with validation and pagination features that Cassandra does not provide by itself.</p>
 
 <p>For example, inserting an API is as easy as:</p>
 <div class="highlight"><pre><code class="language-lua" data-lang="lua"><span class="kd">local</span> <span class="n">inserted_api</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">dao</span><span class="p">.</span><span class="n">apis</span><span class="p">:</span><span class="n">insert</span><span class="p">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">mockbin&quot;</span><span class="p">,</span>
-  <span class="n">upstream_url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">http://mockbin.com&quot;</span><span class="p">,</span>
-  <span class="n">request_host</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">mockbin.com&quot;</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">"</span><span class="s">mockbin"</span><span class="p">,</span>
+  <span class="n">upstream_url</span> <span class="o">=</span> <span class="s2">"</span><span class="s">http://mockbin.com"</span><span class="p">,</span>
+  <span class="n">request_host</span> <span class="o">=</span> <span class="s2">"</span><span class="s">mockbin.com"</span>
 <span class="p">})</span>
 </code></pre></div>
 <hr>
@@ -556,11 +585,11 @@
 
 <p>Because Kong needs to deal with more than the three core entities, the <a href="/docs/0.5.x/lua-reference/modules/kong.dao.cassandra.base_dao">kong.dao.cassandra.base_dao</a> can be inherited to support any entity. Plugins make heavy use of this feature, and every exising plugin implements their own DAO, loaded by the DAO Factory and made available everywhere the factory is, just like the core entities.</p>
 
-<p>Now, let&#39;s see how to create your own DAO for your plugin in the next chapter: <a href="/docs/0.5.x/plugin-development/custom-entities/">Custom Entities</a>.</p>
+<p>Now, let's see how to create your own DAO for your plugin in the next chapter: <a href="/docs/0.5.x/plugin-development/custom-entities/">Custom Entities</a>.</p>
 
 <hr>
 
-<p>Next: <a href="/docs/0.5.x/plugin-development/custom-entities/">Custom Entities &rsaquo;</a></p>
+<p>Next: <a href="/docs/0.5.x/plugin-development/custom-entities/">Custom Entities ›</a></p>
 
       </div>
     </div>
@@ -599,8 +628,8 @@
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -610,20 +639,7 @@
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

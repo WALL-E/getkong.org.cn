@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Lua Reference - kong.dao.cassandra.base_dao - v0.7.x | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Lua Reference - kong.dao.cassandra.base_dao - v0.7.x | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/"  class="active">Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/"  class="active">文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -103,7 +104,10 @@
     
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
           Version 0.7.x
+          
+          
           
           <span class="caret"></span>
         </button>
@@ -146,7 +150,10 @@
               <li>
                 
                   <a href="/docs/0.5.x/lua-reference/">
+                    
                     0.5.x
+                    
+                  
                     
                   </a>
                 
@@ -157,7 +164,10 @@
               <li>
                 
                   <a href="/docs/0.6.x/lua-reference/">
+                    
                     0.6.x
+                    
+                  
                     
                   </a>
                 
@@ -170,7 +180,10 @@
               <li>
                 
                   <a href="/docs/0.8.x/lua-reference/">
+                    
                     0.8.x
+                    
+                  
                     
                   </a>
                 
@@ -181,8 +194,10 @@
               <li>
                 
                   <a href="/docs/0.9.x/lua-reference/">
+                    
                     0.9.x
                     (latest)
+                  
                   </a>
                 
               </li>
@@ -233,14 +248,14 @@
 
 
 
-<h2><a href="#Public_interface">Public interface </a></h2>
+<h2><a href="#Public_interface">Public interface  </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:execute">BaseDao:execute (query, args, query_options, keyspace)</a></td>
     <td class="summary">Execute a query.</td>
   </tr>
 </table>
-<h2><a href="#Children_DAOs_interface">Children DAOs interface </a></h2>
+<h2><a href="#Children_DAOs_interface">Children DAOs interface  </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:count_by_keys">BaseDao:count_by_keys (where_t, paging_state)</a></td>
@@ -276,7 +291,7 @@
     <td class="summary">Update an entity.</td>
   </tr>
 </table>
-<h2><a href="#Optional_overrides">Optional overrides </a></h2>
+<h2><a href="#Optional_overrides">Optional overrides  </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:_marshall">BaseDao:_marshall (t)</a></td>
@@ -291,7 +306,7 @@
     <td class="summary">Constructor.</td>
   </tr>
 </table>
-<h2><a href="#Private_methods">Private methods </a></h2>
+<h2><a href="#Private_methods">Private methods  </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:build_args_and_execute">BaseDao:build_args_and_execute (query, columns, args_to_bind, query_options)</a></td>
@@ -309,10 +324,12 @@
 </table>
 
 
-<h2 class="section-header has-description"><a name="Public_interface">Public interface </a></h2>
+<h2 class="section-header has-description"><a name="Public_interface">Public interface  </a></h2>
 
 <div class="section-description">
+
 Public methods developers can use in Kong core or in any plugin.
+
 </div>
 
 <dl class="function">
@@ -321,30 +338,37 @@ Public methods developers can use in Kong core or in any plugin.
     <h4><a name="BaseDao:execute">BaseDao:execute</a></h4>
   </dt>
   <dd>
+    
     Execute a query.
  This method should be called with the proper <strong>args</strong> formatting (as an array).
  See <code>execute()</code> for building this parameter.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">query</code>
           Plain string CQL query.
+        
         </li>
         <li>
           <code class="parameter">args</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           (Optional) Arguments to the query, as an array. Simply passed to lua-cassandra <code>execute()</code>.
+        
         </li>
         <li>
           <code class="parameter">query_options</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           (Optional) Options to give to lua-cassandra <code>execute()</code> query_options.
+        
         </li>
         <li>
           <code class="parameter">keyspace</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           (Optional) Override the keyspace for this query if specified.
+        
         </li>
     </ul>
 
@@ -353,10 +377,12 @@ Public methods developers can use in Kong core or in any plugin.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         If the result consists of ROWS, a table with an array of unmarshalled rows and a <code>next_page</code> property if the results has a <code>paging_state</code>. If the result is of type "VOID", a boolean representing the success of the query. Otherwise, the raw result as given by lua-cassandra.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         An error if any during the execution.
+      
       </li>
     </ul>
 
@@ -371,11 +397,13 @@ Public methods developers can use in Kong core or in any plugin.
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Children_DAOs_interface">Children DAOs interface </a></h2>
+<h2 class="section-header has-description"><a name="Children_DAOs_interface">Children DAOs interface  </a></h2>
 
 <div class="section-description">
+
 Those methds are to be used in any child DAO and will perform the named operations
  the entity they represent.
+
 </div>
 
 <dl class="function">
@@ -384,7 +412,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:count_by_keys">BaseDao:count_by_keys</a></h4>
   </dt>
   <dd>
+    
     Retrieve the number of rows in the related column family matching a possible 'WHERE' clause.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -392,11 +423,13 @@ Those methds are to be used in any child DAO and will perform the named operatio
           <code class="parameter">where_t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           (Optional) columns/values table by which to count entities.
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. It'll be passed along to lua-cassandra <code>execute()</code> query_options.
+        
         </li>
     </ul>
 
@@ -405,14 +438,17 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><span class="type">number</span></span>
         The number of rows matching the specified criteria.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         An error if any.
+      
       </li>
       <li>
         <span class="types"><span class="type">boolean</span></span>
         A boolean indicating if the 'ALLOW FILTERING' clause was needed by the query.
+      
       </li>
     </ul>
 
@@ -426,13 +462,17 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:delete">BaseDao:delete</a></h4>
   </dt>
   <dd>
+    
     Delete the row with PRIMARY KEY from the configured table (<strong>_table</strong> attribute).
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">primary_key_t</code>
           A table containing the PRIMARY KEY (columns/values) of the row to delete
+        
         </li>
     </ul>
 
@@ -441,10 +481,12 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><span class="type">boolean</span></span>
         True if deleted, false if otherwise or not found.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the query execution or the cascade delete hook.
+      
       </li>
     </ul>
 
@@ -458,14 +500,20 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:drop">BaseDao:drop</a></h4>
   </dt>
   <dd>
+    
     Truncate the table related to this DAO (the <strong>_table</strong> attribute).
  Only executes a 'TRUNCATE' query using the <a href="../modules/kong.dao.cassandra.base_dao.html#BaseDao:execute">execute</a> method.
+
+
+    
 
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         Return values of execute().
+      
       </li>
     </ul>
 
@@ -483,7 +531,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:find">BaseDao:find</a></h4>
   </dt>
   <dd>
+    
     Retrieve a page of rows from the related column family.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -491,18 +542,22 @@ Those methds are to be used in any child DAO and will perform the named operatio
           <code class="parameter">page_size</code>
           <span class="types"><span class="type">number</span></span>
           Size of the page to retrieve (number of rows). The default is the default value from lua-cassandra.
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. It'll be passed along to lua-cassandra <code>execute()</code> query_options.
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         return values of find<em>by</em>keys()
+      
       </li>
     </ul>
 
@@ -520,8 +575,11 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:find_by_keys">BaseDao:find_by_keys</a></h4>
   </dt>
   <dd>
+    
     Retrieve a set of rows from the given columns/value table with a given
  'WHERE' clause.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -529,16 +587,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
           <code class="parameter">where_t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           (Optional) columns/values table by which to find an entity.
+        
         </li>
         <li>
           <code class="parameter">page_size</code>
           <span class="types"><span class="type">number</span></span>
           Size of the page to retrieve (number of rows).
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. See lua-cassandra's related <code>execute()</code> option.
+        
         </li>
     </ul>
 
@@ -547,14 +608,17 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         An array (of possible length 0) of entities as the result of the query
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         An error if any
+      
       </li>
       <li>
         <span class="types"><span class="type">boolean</span></span>
         A boolean indicating if the 'ALLOW FILTERING' clause was needed by the query
+      
       </li>
     </ul>
 
@@ -568,7 +632,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:find_by_primary_key">BaseDao:find_by_primary_key</a></h4>
   </dt>
   <dd>
+    
     Retrieve a row at given PRIMARY KEY.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -576,6 +643,7 @@ Those methds are to be used in any child DAO and will perform the named operatio
           <code class="parameter">where_t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           A table containing the PRIMARY KEY (it can be composite, hence be multiple columns as keys and their values) of the row to retrieve.
+        
         </li>
     </ul>
 
@@ -584,10 +652,12 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The first row of the result.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the execution
+      
       </li>
     </ul>
 
@@ -601,14 +671,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:insert">BaseDao:insert</a></h4>
   </dt>
   <dd>
+    
     Insert a row in the defined column family (defined by the <strong>_table</strong> attribute).
  Perform schema validation, 'UNIQUE' checks, 'FOREIGN' checks.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">t</code>
           A table representing the entity to insert.
+        
         </li>
     </ul>
 
@@ -617,10 +691,12 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Inserted entity or nil.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the execution.
+      
       </li>
     </ul>
 
@@ -639,6 +715,7 @@ Those methds are to be used in any child DAO and will perform the named operatio
     <h4><a name="BaseDao:update">BaseDao:update</a></h4>
   </dt>
   <dd>
+    
     Update an entity.
  Find the row with the given PRIMARY KEY and update its colums with values
  from the given table and return the complete entity, with updates taken into account.
@@ -646,22 +723,27 @@ Those methds are to be used in any child DAO and will perform the named operatio
  any schema field that is not included in the given argument will be set to CQL <code>null</code> (unset).
  Performs schema validation, 'UNIQUE' and 'FOREIGN' checks.
 
+    
+
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           A table representing the entity to update. It should contain the entity's PRIMARY KEY fields (can be composite). If not, then a selector can be passed as argument #3.
+        
         </li>
         <li>
           <code class="parameter">full</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, set to CQL <code>null</code> any column not in the <code>t</code> argument, such as a PUT query would do for example.
+        
         </li>
         <li>
           <code class="parameter">where_t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           A table containing the PRIMARY KEY fields of the row to update.
+        
         </li>
     </ul>
 
@@ -670,10 +752,12 @@ Those methds are to be used in any child DAO and will perform the named operatio
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         <code>result</code>: Updated entity or nil.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         <code>error</code>: Error if any during the execution.
+      
       </li>
     </ul>
 
@@ -689,10 +773,12 @@ Those methds are to be used in any child DAO and will perform the named operatio
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Optional_overrides">Optional overrides </a></h2>
+<h2 class="section-header has-description"><a name="Optional_overrides">Optional overrides  </a></h2>
 
 <div class="section-description">
+
 Can be optionally overriden by a child DAO.
+
 </div>
 
 <dl class="function">
@@ -701,10 +787,13 @@ Can be optionally overriden by a child DAO.
     <h4><a name="BaseDao:_marshall">BaseDao:_marshall</a></h4>
   </dt>
   <dd>
+    
     Marshall an entity.
  Executed on each entity insertion to serialize
  eventual properties for Cassandra storage.
  Does nothing by default, must be overriden for entities where marshalling applies.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -712,6 +801,7 @@ Can be optionally overriden by a child DAO.
           <code class="parameter">t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Entity to marshall.
+        
         </li>
     </ul>
 
@@ -720,6 +810,7 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Serialized entity.
+      
       </li>
     </ul>
 
@@ -737,10 +828,13 @@ Can be optionally overriden by a child DAO.
     <h4><a name="BaseDao:_unmarshall">BaseDao:_unmarshall</a></h4>
   </dt>
   <dd>
+    
     Unmarshall an entity.
  Executed each time an entity is being retrieved from Cassandra
  to deserialize properties serialized by <code>:_mashall()</code>,
  Does nothing by default, must be overriden for entities where marshalling applies.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -748,6 +842,7 @@ Can be optionally overriden by a child DAO.
           <code class="parameter">t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Entity to unmarshall.
+        
         </li>
     </ul>
 
@@ -756,6 +851,7 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Deserialized entity.
+      
       </li>
     </ul>
 
@@ -773,15 +869,19 @@ Can be optionally overriden by a child DAO.
     <h4><a name="BaseDao:new">BaseDao:new</a></h4>
   </dt>
   <dd>
+    
     Constructor.
  Instanciate a new Cassandra DAO. This method is to be overriden from the
  child class and called once the child class has a schema set.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">properties</code>
           Cassandra properties from the configuration file.
+        
         </li>
     </ul>
 
@@ -790,6 +890,7 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Instanciated DAO.
+      
       </li>
     </ul>
 
@@ -800,10 +901,12 @@ Can be optionally overriden by a child DAO.
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Private_methods">Private methods </a></h2>
+<h2 class="section-header has-description"><a name="Private_methods">Private methods  </a></h2>
 
 <div class="section-description">
+
 For internal use in the base_dao itself or advanced usage in a child DAO.
+
 </div>
 
 <dl class="function">
@@ -812,8 +915,11 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     <h4><a name="BaseDao:build_args_and_execute">BaseDao:build_args_and_execute</a></h4>
   </dt>
   <dd>
+    
     Bind a table of arguments to a query depending on the entity's schema,
  and then execute the query via <code>execute()</code>.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -821,28 +927,34 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
           <code class="parameter">query</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           The query to execute.
+        
         </li>
         <li>
           <code class="parameter">columns</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           A list of column names where each value indicates the column of the value at the same index in <code>args_to_bind</code>.
+        
         </li>
         <li>
           <code class="parameter">args_to_bind</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Key/value table of arguments to bind.
+        
         </li>
         <li>
           <code class="parameter">query_options</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Options to pass to lua-cassandra <code>execute()</code> query_options.
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         return values of <code>execute()</code>.
+      
       </li>
     </ul>
 
@@ -859,8 +971,11 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     <h4><a name="BaseDao:check_foreign_fields">BaseDao:check_foreign_fields</a></h4>
   </dt>
   <dd>
+    
     Perform "foreign" check on a column.
  Check all fields marked with <code>foreign</code> in the schema have an existing parent row.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -868,6 +983,7 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
           <code class="parameter">t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Key/value representation of the entity.
+        
         </li>
     </ul>
 
@@ -876,10 +992,12 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       <li>
         <span class="types"><span class="type">boolean</span></span>
         True if all fields marked as foreign have a parent row.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A key/value table of all columns (as keys) not having a parent row.
+      
       </li>
     </ul>
 
@@ -893,9 +1011,12 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     <h4><a name="BaseDao:check_unique_fields">BaseDao:check_unique_fields</a></h4>
   </dt>
   <dd>
+    
     Perform "unique" check on a column.
  Check that all fields marked with <code>unique</code> in the schema do not already exist
  with the same value.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -903,11 +1024,13 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
           <code class="parameter">t</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Key/value representation of the entity
+        
         </li>
         <li>
           <code class="parameter">is_update</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, ignore an identical value if the row containing it is the one we are trying to update.
+        
         </li>
     </ul>
 
@@ -916,10 +1039,12 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       <li>
         <span class="types"><span class="type">boolean</span></span>
         True if all unique fields are not already present, false if any already exists with the same value.
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A key/value table of all columns (as keys) having values already in the database.
+      
       </li>
     </ul>
 
@@ -968,8 +1093,8 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -979,20 +1104,7 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

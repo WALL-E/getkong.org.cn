@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Plugins - Response Transformer | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Plugins - Response Transformer | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/" >Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/" >文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +106,7 @@
         
           <ul class="breadcrumbs">
             
-              <li class="breadcrumb-item"><a href="/plugins">Plugins</a></li>
+              <li class="breadcrumb-item"><a href="/plugins">插件</a></li>
             
           </ul>
         
@@ -139,7 +140,7 @@
           <ul>
             
               <li>
-                <a href="#installation">Installation</a>
+                <a href="#installation">安装</a>
 
                 
               </li>
@@ -174,6 +175,7 @@
 
 <div class="alert alert-warning">
   <strong>Note on transforming bodies:</strong> Be aware of the performamce of transformations on the response body. In order to parse and modify a JSON body, the plugin needs to retain it in memory, which might cause pressure on the worker's Lua VM when dealing with large bodies (several MBs). Because of Nginx's internals, the `Content-Length` header will not be set when transforming a response body.
+
 </div>
 
 <hr>
@@ -182,13 +184,13 @@
 
 <p>Configuring the plugin is as simple as a single API call, you can configure and enable it for your <a href="/docs/latest/admin-api/#api-object">API</a> (or <a href="/docs/latest/admin-api/#consumer-object">Consumer</a>) by executing the following request on your Kong server:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/apis/<span class="o">{</span>api<span class="o">}</span>/plugins <span class="se">\</span>
-    --data <span class="s2">&quot;name=response-transformer&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.add.headers[1]=x-new-header:some,value&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.add.headers[2]=x-another-header:some,value&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.add.json=new-json-key:some_value, another-json-key:some_value&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.remove.headers=x-toremove, x-another-one&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.remove.json=json-key-toremove, another-json-key&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;config.append.headers=x-existing-header:some_value, x-another-header:some_value&quot;</span>
+    --data <span class="s2">"name=response-transformer"</span> <span class="se">\</span>
+    --data <span class="s2">"config.add.headers[1]=x-new-header:some,value"</span> <span class="se">\</span>
+    --data <span class="s2">"config.add.headers[2]=x-another-header:some,value"</span> <span class="se">\</span>
+    --data <span class="s2">"config.add.json=new-json-key:some_value, another-json-key:some_value"</span> <span class="se">\</span>
+    --data <span class="s2">"config.remove.headers=x-toremove, x-another-one"</span> <span class="se">\</span>
+    --data <span class="s2">"config.remove.json=json-key-toremove, another-json-key"</span> <span class="se">\</span>
+    --data <span class="s2">"config.append.headers=x-existing-header:some_value, x-another-header:some_value"</span>
 </code></pre></div>
 <p>Note: if the value contains a <code>,</code> then the comma separated format cannot be used. The array notation must be used instead.</p>
 
@@ -267,9 +269,9 @@
 <li>Add multiple headers by passing each header:value pair separately:</li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -X POST http://localhost:8001/apis/mockbin/plugins \
-  --data &quot;name=response-transformer&quot; \
-  --data &quot;config.add.headers[1]=h1:v1&quot; \
-  --data &quot;config.add.headers[2]=h2:v1&quot;
+  --data "name=response-transformer" \
+  --data "config.add.headers[1]=h1:v1" \
+  --data "config.add.headers[2]=h2:v1"
 </code></pre></div>
 <table><thead>
 <tr>
@@ -289,8 +291,8 @@
 <li>Add multiple headers by passing comma separated header:value pair:</li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -X POST http://localhost:8001/apis/mockbin/plugins \
-  --data &quot;name=response-transformer&quot; \
-  --data &quot;config.add.headers=h1:v1,h2:v2&quot;
+  --data "name=response-transformer" \
+  --data "config.add.headers=h1:v1,h2:v2"
 </code></pre></div>
 <table><thead>
 <tr>
@@ -310,8 +312,8 @@
 <li>Add multiple headers passing config as JSON body:</li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -X POST http://localhost:8001/apis/mockbin/plugins \
-  --header &#39;content-type: application/json&#39; \
-  --data &#39;{&quot;name&quot;: &quot;response-transformer&quot;, &quot;config&quot;: {&quot;add&quot;: {&quot;headers&quot;: [&quot;h1:v2&quot;, &quot;h2:v1&quot;]}}}&#39;
+  --header 'content-type: application/json' \
+  --data '{"name": "response-transformer", "config": {"add": {"headers": ["h1:v2", "h2:v1"]}}}'
 </code></pre></div>
 <table><thead>
 <tr>
@@ -331,9 +333,9 @@
 <li>Add a body property and a header:</li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -X POST http://localhost:8001/apis/mockbin/plugins \
-  --data &quot;name=response-transformer&quot; \
-  --data &quot;config.add.json=p1:v1,p2=v2&quot; \
-  --data &quot;config.add.headers=h1:v1&quot;
+  --data "name=response-transformer" \
+  --data "config.add.json=p1:v1,p2=v2" \
+  --data "config.add.headers=h1:v1"
 </code></pre></div>
 <table><thead>
 <tr>
@@ -359,11 +361,11 @@
 </thead><tbody>
 <tr>
 <td>{}</td>
-<td>{&quot;p1&quot; : &quot;v1&quot;, &quot;p2&quot;: &quot;v2&quot;}</td>
+<td>{"p1" : "v1", "p2": "v2"}</td>
 </tr>
 <tr>
-<td>{&quot;p1&quot; : &quot;v2&quot;}</td>
-<td>{&quot;p1&quot; : &quot;v2&quot;, &quot;p2&quot;: &quot;v2&quot;}</td>
+<td>{"p1" : "v2"}</td>
+<td>{"p1" : "v2", "p2": "v2"}</td>
 </tr>
 </tbody></table>
 
@@ -373,8 +375,8 @@
 <li>Append multiple headers and remove a body property:</li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ curl -X POST http://localhost:8001/apis/mockbin/plugins \
-  --header &#39;content-type: application/json&#39; \
-  --data &#39;{&quot;name&quot;: &quot;response-transformer&quot;, &quot;config&quot;: {&quot;append&quot;: {&quot;headers&quot;: [&quot;h1:v2&quot;, &quot;h2:v1&quot;]}, &quot;remove&quot;: {&quot;json&quot;: [&quot;p1&quot;]}}}&#39;
+  --header 'content-type: application/json' \
+  --data '{"name": "response-transformer", "config": {"append": {"headers": ["h1:v2", "h2:v1"]}, "remove": {"json": ["p1"]}}}'
 </code></pre></div>
 <table><thead>
 <tr>
@@ -395,12 +397,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>{&quot;p2&quot;: &quot;v2&quot;}</td>
-<td>{&quot;p2&quot;: &quot;v2&quot;}</td>
+<td>{"p2": "v2"}</td>
+<td>{"p2": "v2"}</td>
 </tr>
 <tr>
-<td>{&quot;p1&quot; : &quot;v1&quot;, &quot;p2&quot; : &quot;v1&quot;}</td>
-<td>{&quot;p2&quot;: &quot;v2&quot;}</td>
+<td>{"p1" : "v1", "p2" : "v1"}</td>
+<td>{"p2": "v2"}</td>
 </tr>
 </tbody></table>
 
@@ -442,8 +444,8 @@
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -453,20 +455,7 @@
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

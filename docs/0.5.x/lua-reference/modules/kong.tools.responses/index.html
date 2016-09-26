@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Lua Reference - kong.tools.responses - v0.5.x | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Lua Reference - kong.tools.responses - v0.5.x | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/"  class="active">Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/"  class="active">文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -103,7 +104,10 @@
     
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
           Version 0.5.x
+          
+          
           
           <span class="caret"></span>
         </button>
@@ -148,7 +152,10 @@
               <li>
                 
                   <a href="/docs/0.6.x/lua-reference/">
+                    
                     0.6.x
+                    
+                  
                     
                   </a>
                 
@@ -159,7 +166,10 @@
               <li>
                 
                   <a href="/docs/0.7.x/lua-reference/">
+                    
                     0.7.x
+                    
+                  
                     
                   </a>
                 
@@ -170,7 +180,10 @@
               <li>
                 
                   <a href="/docs/0.8.x/lua-reference/">
+                    
                     0.8.x
+                    
+                  
                     
                   </a>
                 
@@ -181,8 +194,10 @@
               <li>
                 
                   <a href="/docs/0.9.x/lua-reference/">
+                    
                     0.9.x
                     (latest)
+                  
                   </a>
                 
               </li>
@@ -226,7 +241,7 @@
     <div class="content">
 <h1><code>kong.tools.responses</code></h1>
 <p>Kong helper methods to send HTTP responses to clients.</p>
-<p><p> Can be used in the proxy (core/resolver), plugins or Admin API.
+<p><p>  Can be used in the proxy (core/resolver), plugins or Admin API.
  Most used HTTP status codes and responses are implemented as helper methods.</p>
 
 
@@ -274,11 +289,14 @@
     <h4><a name="send">send</a></h4>
   </dt>
   <dd>
+    
     Send a response with any status code or body,
  Not all status codes are available as sugar methods, this function can be
  used to send any response.
  If the <code>status_code</code> parameter is in the 5xx range, it is expectde that the <code>content</code> parameter be the error encountered. It will be logged and the response body will be empty. The user will just receive a 500 status code.
  Will call <a href="https://github.com/openresty/lua-nginx-module#ngxsay">ngx.say</a> and <a href="https://github.com/openresty/lua-nginx-module#ngxexit">ngx.exit</a>, terminating the current context.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
@@ -286,27 +304,33 @@
           <code class="parameter">status_code</code>
           <span class="types"><span class="type">number</span></span>
           HTTP status code to send
+        
         </li>
         <li>
           <code class="parameter">body</code>
           A string or table which will be the body of the sent response. If table, the response will be encoded as a JSON object. If string, the response will be a JSON object and the string will be contained in the <code>message</code> property. Except if the <code>raw</code> parameter is set to <code>true</code>.
+        
         </li>
         <li>
           <code class="parameter">raw</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, send the <code>body</code> as it is.
+        
         </li>
         <li>
           <code class="parameter">headers</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Response headers to send.
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         ngx.exit (Exit current context)
+      
       </li>
     </ul>
 
@@ -331,56 +355,70 @@
     <h4><a name="status_codes">status_codes</a></h4>
   </dt>
   <dd>
+    
     Define the most common HTTP status codes for sugar methods.
  Each of those status will generate a helper method (sugar)
  attached to this exported module prefixed with <code>send_</code>.
  Final signature of those methods will be <code>send_&lt;status_code_key&gt;(message, raw, headers)</code>. See <a href="../modules/kong.tools.responses.html#send">send</a> for more details on those parameters.
+
+    
 
     <h5>Fields:</h5>
     <ul>
         <li>
           <code class="parameter">HTTP_OK</code>
           200 OK
+        
         </li>
         <li>
           <code class="parameter">HTTP_CREATED</code>
           201 Created
+        
         </li>
         <li>
           <code class="parameter">HTTP_NO_CONTENT</code>
           204 No Content
+        
         </li>
         <li>
           <code class="parameter">HTTP_BAD_REQUEST</code>
           400 Bad Request
+        
         </li>
         <li>
           <code class="parameter">HTTP_UNAUTHORIZED</code>
           401 Unauthorized
+        
         </li>
         <li>
           <code class="parameter">HTTP_FORBIDDEN</code>
           403 Forbidden
+        
         </li>
         <li>
           <code class="parameter">HTTP_NOT_FOUND</code>
           404 Not Found
+        
         </li>
         <li>
           <code class="parameter">HTTP_METHOD_NOT_ALLOWED</code>
           405 Method Not Allowed
+        
         </li>
         <li>
           <code class="parameter">HTTP_CONFLICT</code>
           409 Conflict
+        
         </li>
         <li>
           <code class="parameter">HTTP_UNSUPPORTED_MEDIA_TYPE</code>
           415 Unsupported Media Type
+        
         </li>
         <li>
           <code class="parameter">HTTP_INTERNAL_SERVER_ERROR</code>
           Internal Server Error
+        
         </li>
     </ul>
 
@@ -436,8 +474,8 @@
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -447,20 +485,7 @@
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

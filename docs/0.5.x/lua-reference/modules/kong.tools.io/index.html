@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Lua Reference - kong.tools.io - v0.5.x | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Lua Reference - kong.tools.io - v0.5.x | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/"  class="active">Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/"  class="active">文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -103,7 +104,10 @@
     
       <div class="dropdown page-header-right">
         <button class="page-header-btn" id="version-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
           Version 0.5.x
+          
+          
           
           <span class="caret"></span>
         </button>
@@ -148,7 +152,10 @@
               <li>
                 
                   <a href="/docs/0.6.x/lua-reference/">
+                    
                     0.6.x
+                    
+                  
                     
                   </a>
                 
@@ -159,7 +166,10 @@
               <li>
                 
                   <a href="/docs/0.7.x/lua-reference/">
+                    
                     0.7.x
+                    
+                  
                     
                   </a>
                 
@@ -170,7 +180,10 @@
               <li>
                 
                   <a href="/docs/0.8.x/lua-reference/">
+                    
                     0.8.x
+                    
+                  
                     
                   </a>
                 
@@ -181,8 +194,10 @@
               <li>
                 
                   <a href="/docs/0.9.x/lua-reference/">
+                    
                     0.9.x
                     (latest)
+                  
                   </a>
                 
               </li>
@@ -268,13 +283,17 @@
     <h4><a name="cmd_exists">cmd_exists</a></h4>
   </dt>
   <dd>
+    
     Check existence of a command.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">cmd</code>
           command being searched for
+        
         </li>
     </ul>
 
@@ -282,6 +301,7 @@
     <ul>
       <li>
         <code>true</code> of found, <code>false</code> otherwise
+      
       </li>
     </ul>
 
@@ -295,20 +315,26 @@
     <h4><a name="file_size">file_size</a></h4>
   </dt>
   <dd>
+    
     Get the filesize.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">path</code>
           path to file to check
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         size of file, or <code>nil</code> on failure
+      
       </li>
     </ul>
 
@@ -322,18 +348,23 @@
     <h4><a name="kill_process_by_pid_file">kill_process_by_pid_file</a></h4>
   </dt>
   <dd>
+    
     Kill a process by PID.
  Kills the process and waits until it's terminated
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">pid_file</code>
           the file containing the pid to kill
+        
         </li>
         <li>
           <code class="parameter">signal</code>
           the signal to use
+        
         </li>
     </ul>
 
@@ -341,6 +372,7 @@
     <ul>
       <li>
         <a href="../modules/kong.tools.io.html#os_execute">os_execute</a> results, see os_execute.
+      
       </li>
     </ul>
 
@@ -354,23 +386,31 @@
     <h4><a name="os_execute">os_execute</a></h4>
   </dt>
   <dd>
+    
     Execute an OS command and catch the output.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">command</code>
           OS command to execute
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         string containing command output (both stdout and stderr)
+      
       </li>
       <li>
+        
         exitcode
+      
       </li>
     </ul>
 
@@ -384,20 +424,26 @@
     <h4><a name="read_file">read_file</a></h4>
   </dt>
   <dd>
+    
     Read file contents.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">path</code>
           filepath to read
+        
         </li>
     </ul>
 
     <h5>Returns:</h5>
     <ul>
       <li>
+        
         file contents as string, or <code>nil</code> if not succesful
+      
       </li>
     </ul>
 
@@ -411,13 +457,17 @@
     <h4><a name="write_to_file">write_to_file</a></h4>
   </dt>
   <dd>
+    
     Write file contents.
+
+    
 
     <h5>Parameters:</h5>
     <ul>
         <li>
           <code class="parameter">path</code>
           filepath to write to
+        
         </li>
     </ul>
 
@@ -425,6 +475,7 @@
     <ul>
       <li>
         <code>true</code> upon success, or <code>false</code> + error message on failure
+      
       </li>
     </ul>
 
@@ -473,8 +524,8 @@
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -484,20 +535,7 @@
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

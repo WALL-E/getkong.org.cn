@@ -2,18 +2,19 @@
 <html lang="en" itemscope itemtype="http://schema.org/Article">
   
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Plugins - Key Authentication | Kong - Open-Source API Management and Microservice Management</title>
-  <meta name="description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <title>Plugins - Key Authentication | Kong - Open-Source API Management and Microservice Management</title><!-- use share link for facebook -->
+  <meta name="description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="author" content="Mashape"/>
-  <meta property="og:title" content="Open-Source API Management and Microservice Management"/>
+  <meta property="og:title" content="开源 API 管理平台和微服务管理平台"/>
   <meta property="og:site_name" content="Kong"/>
-  <!-- use share link for facebook -->
+  
   <meta property="og:url" content="http://getkong.org"/>
-  <meta property="og:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
+  <meta property="og:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more."/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:image" content="https://getkong.org/assets/images/share.png"/>
@@ -21,7 +22,7 @@
   <meta name="twitter:site" content="@mashape"/>
   <meta name="twitter:creator" content="@mashape"/>
   <meta name="twitter:url" content="https://getkong.org"/>
-  <meta name="twitter:description" content="Secure, Manage & Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
+  <meta name="twitter:description" content="Secure, Manage &amp; Extend your APIs or Microservices with plugins for authentication, logging, rate-limiting, transformations and more.">
   <meta name="twitter:image" content="https://getkong.org/assets/images/share.png">
   <meta property="fb:admins" content="227304446"/>
   <meta property="fb:admins" content="576641408"/>
@@ -55,7 +56,7 @@
           <li class="active"><a href="http://getkong.org">Kong</a></li>
           <li><a href="http://gelato.io">Gelato</a></li>
           <li><a href="http://getgalileo.io">Galileo</a></li>
-          <li><a href="http://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="http://www.mashape.com/enterprise/">企业版</a></li>
         </ul>
       </nav>
       <nav class="enterprise-contact one-half column">
@@ -75,14 +76,14 @@
       </button>
       <nav id="navbar" class="navbar-nav">
         <ul>
-          <li><a href="/about/" >About</a></li>
-          <li><a href="/docs/" >Docs</a></li>
-          <li><a href="/plugins/" >Plugins</a></li>
-          <li><a href="/community/" >Community</a></li>
-          <li><a href="https://www.mashape.com/enterprise/">Enterprise</a></li>
+          <li><a href="/about/" >关于</a></li>
+          <li><a href="/docs/" >文档</a></li>
+          <li><a href="/plugins/" >插件</a></li>
+          <li><a href="/community/" >社区版</a></li>
+          <li><a href="https://www.mashape.com/enterprise/">企业版</a></li>
           <li><a href="https://github.com/Mashape/kong" target="_blank">GitHub</a></li>
           <li>
-            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>Installation</a>
+            <a href="/install/" class="button button-dark" data-analytics='{"event": "Clicked download", "type": "button", "location": "header"}'>安装</a>
           </li>
         </ul>
       </nav>
@@ -105,7 +106,7 @@
         
           <ul class="breadcrumbs">
             
-              <li class="breadcrumb-item"><a href="/plugins">Plugins</a></li>
+              <li class="breadcrumb-item"><a href="/plugins">插件</a></li>
             
           </ul>
         
@@ -211,18 +212,18 @@
 
 <p>Configuring the plugin is straightforward, you can add it on top of an <a href="/docs/latest/admin-api/#api-object">API</a> by executing the following request on your Kong server:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/apis/<span class="o">{</span>api<span class="o">}</span>/plugins <span class="se">\</span>
-    --data <span class="s2">&quot;name=key-auth&quot;</span>
+    --data <span class="s2">"name=key-auth"</span>
 HTTP/1.1 <span class="m">201</span> Created
 
 <span class="o">{</span>
-    <span class="s2">&quot;api_id&quot;</span>: <span class="s2">&quot;d87d0e23-a1c1-4981-9989-84ee9a1a0781&quot;</span>,
-    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;5bde4bc6-c27b-44a2-bcfd-5352c3bb29a1&quot;</span>,
-    <span class="s2">&quot;created_at&quot;</span>: 1472604757000,
-    <span class="s2">&quot;enabled&quot;</span>: <span class="nb">true</span>,
-    <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;key-auth&quot;</span>,
-    <span class="s2">&quot;config&quot;</span>: <span class="o">{</span>
-        <span class="s2">&quot;key_names&quot;</span>: <span class="o">[</span><span class="s2">&quot;apikey&quot;</span><span class="o">]</span>,
-        <span class="s2">&quot;hide_credentials&quot;</span>:false
+    <span class="s2">"api_id"</span>: <span class="s2">"d87d0e23-a1c1-4981-9989-84ee9a1a0781"</span>,
+    <span class="s2">"id"</span>: <span class="s2">"5bde4bc6-c27b-44a2-bcfd-5352c3bb29a1"</span>,
+    <span class="s2">"created_at"</span>: 1472604757000,
+    <span class="s2">"enabled"</span>: <span class="nb">true</span>,
+    <span class="s2">"name"</span>: <span class="s2">"key-auth"</span>,
+    <span class="s2">"config"</span>: <span class="o">{</span>
+        <span class="s2">"key_names"</span>: <span class="o">[</span><span class="s2">"apikey"</span><span class="o">]</span>,
+        <span class="s2">"hide_credentials"</span>:false
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
@@ -264,15 +265,15 @@ HTTP/1.1 <span class="m">201</span> Created
 
 <p>You need to associate a credential to an existing <a href="/docs/latest/admin-api/#consumer-object">Consumer</a> object, that represents a user consuming the API. To create a <a href="/docs/latest/admin-api/#consumer-object">Consumer</a> you can execute the following request:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/consumers/ <span class="se">\</span>
-    --data <span class="s2">&quot;username=&lt;USERNAME&gt;&quot;</span> <span class="se">\</span>
-    --data <span class="s2">&quot;custom_id=&lt;CUSTOM_ID&gt;&quot;</span>
+    --data <span class="s2">"username=&lt;USERNAME&gt;"</span> <span class="se">\</span>
+    --data <span class="s2">"custom_id=&lt;CUSTOM_ID&gt;"</span>
 HTTP/1.1 <span class="m">201</span> Created
 
 <span class="o">{</span>
-    <span class="s2">&quot;username&quot;</span>:<span class="s2">&quot;&lt;USERNAME&gt;&quot;</span>,
-    <span class="s2">&quot;custom_id&quot;</span>: <span class="s2">&quot;&lt;CUSTOM_ID&gt;&quot;</span>,
-    <span class="s2">&quot;created_at&quot;</span>: 1472604384000,
-    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;7f853474-7b70-439d-ad59-2481a0a9a904&quot;</span>
+    <span class="s2">"username"</span>:<span class="s2">"&lt;USERNAME&gt;"</span>,
+    <span class="s2">"custom_id"</span>: <span class="s2">"&lt;CUSTOM_ID&gt;"</span>,
+    <span class="s2">"created_at"</span>: 1472604384000,
+    <span class="s2">"id"</span>: <span class="s2">"7f853474-7b70-439d-ad59-2481a0a9a904"</span>
 <span class="o">}</span>
 </code></pre></div>
 <table><thead>
@@ -299,14 +300,14 @@ HTTP/1.1 <span class="m">201</span> Created
 <h3 id="create-an-api-key">Create an API Key</h3>
 
 <p>You can provision new credentials by making the following HTTP request:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/consumers/<span class="o">{</span>consumer<span class="o">}</span>/key-auth -d <span class="s1">&#39;&#39;</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl -X POST http://kong:8001/consumers/<span class="o">{</span>consumer<span class="o">}</span>/key-auth -d <span class="s1">''</span>
 HTTP/1.1 <span class="m">201</span> Created
 
 <span class="o">{</span>
-    <span class="s2">&quot;consumer_id&quot;</span>: <span class="s2">&quot;876bf719-8f18-4ce5-cc9f-5b5af6c36007&quot;</span>,
-    <span class="s2">&quot;created_at&quot;</span>: 1443371053000,
-    <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;62a7d3b7-b995-49f9-c9c8-bac4d781fb59&quot;</span>,
-    <span class="s2">&quot;key&quot;</span>: <span class="s2">&quot;62eb165c070a41d5c1b58d9d3d725ca1&quot;</span>
+    <span class="s2">"consumer_id"</span>: <span class="s2">"876bf719-8f18-4ce5-cc9f-5b5af6c36007"</span>,
+    <span class="s2">"created_at"</span>: 1443371053000,
+    <span class="s2">"id"</span>: <span class="s2">"62a7d3b7-b995-49f9-c9c8-bac4d781fb59"</span>,
+    <span class="s2">"key"</span>: <span class="s2">"62eb165c070a41d5c1b58d9d3d725ca1"</span>
 <span class="o">}</span>
 </code></pre></div>
 <p><code>consumer</code>: The <code>id</code> or <code>username</code> property of the <a href="/docs/latest/admin-api/#consumer-object">Consumer</a> entity to associate the credentials to.</p>
@@ -327,6 +328,7 @@ HTTP/1.1 <span class="m">201</span> Created
 
 <div class="alert alert-warning">
   <strong>Note:</strong> It is recommended to let Kong auto-generate the key. Only specify it yourself if you are migrating an existing system to Kong. You must re-use your keys to make the migration to Kong transparent to your Consumers.
+
 </div>
 
 <h3 id="using-the-api-key">Using the API Key</h3>
@@ -336,7 +338,7 @@ HTTP/1.1 <span class="m">201</span> Created
 </code></pre></div>
 <p>Or in a header:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>curl http://kong:8000/<span class="o">{</span>api path<span class="o">}</span> <span class="se">\</span>
-    -H <span class="s1">&#39;apikey: &lt;some_key&gt;&#39;</span>
+    -H <span class="s1">'apikey: &lt;some_key&gt;'</span>
 </code></pre></div>
 <h3 id="upstream-headers">Upstream Headers</h3>
 
@@ -388,8 +390,8 @@ HTTP/1.1 <span class="m">201</span> Created
   <div class="footer-bar">
     <div class="container">
       <ul class="footer-social">
-        <li>
-          <!-- verse link.web with link.share in the header -->
+        <li><!-- verse link.web with link.share in the header -->
+          
           <div class="fb-share-button" data-href="https://getkong.org" data-layout="button"></div>
         </li>
         <li>
@@ -399,20 +401,7 @@ HTTP/1.1 <span class="m">201</span> Created
           <a class="github-button" href="https://github.com/Mashape/kong" data-icon="octicon-star" data-count-href="/mashape/kong/stargazers" data-count-api="/repos/mashape/kong#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star mashape/kong on GitHub">Star</a>
         </li>
       </ul>
-    <span>
-      <a href="https://mashape.com">
-        <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/>
-        &copy; <strong>2016 Mashape Inc</strong>
-      </a>
-    </span>
-      <span class="footer-separator"></span>
-      <span class="footer-nav">
-        <a href="/license">License</a>
-        <a href="/terms">Terms</a>
-        <a href="/privacy">Privacy</a>
-        <a href="https://www.mashape.com/enterprise/">Enterprise</a>
-        <a href="http://blog.mashape.com/category/open-source/" target="_blank">News</a>
-      </span>
+    <span> <a href="https://mashape.com"> <img src="/assets/images/branding-footer.svg" alt="Mashape" width="22" height="26"/> © <strong>2016 Mashape Inc</strong> </a> </span> <span class="footer-separator"></span> <span class="footer-nav"> <a href="/license">许可证</a> <a href="/terms">条款</a> <a href="/privacy">隐私</a> <a href="https://www.mashape.com/enterprise/">企业版</a> <a href="http://blog.mashape.com/category/open-source/" target="_blank">新闻</a> </span>
     </div>
   </div>
 </footer>

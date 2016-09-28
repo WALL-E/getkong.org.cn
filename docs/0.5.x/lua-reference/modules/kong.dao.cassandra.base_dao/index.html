@@ -107,7 +107,19 @@
           
           
           
+          
+          
+          
+          
           Version 0.5.x
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           
@@ -161,7 +173,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.6.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -181,7 +205,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.7.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -201,7 +237,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.8.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -221,8 +269,16 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.9.x
                     (latest)
+                  
+                  
+                  
+                  
                   
                   
                   
@@ -275,7 +331,7 @@
 
 
 
-<h2><a href="#Public_interface">Public interface    </a></h2>
+<h2><a href="#Public_interface">Public interface        </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:execute">BaseDao:execute (query, args_to_bind, options)</a></td>
@@ -283,7 +339,7 @@
  and then execute the query via <strong>:_execute()</strong>.</td>
   </tr>
 </table>
-<h2><a href="#Children_DAOs_interface">Children DAOs interface    </a></h2>
+<h2><a href="#Children_DAOs_interface">Children DAOs interface        </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:count_by_keys">BaseDao:count_by_keys (where_t, paging_state)</a></td>
@@ -320,7 +376,7 @@
  Performs schema validation, 'UNIQUE' and 'FOREIGN' checks.</td>
   </tr>
 </table>
-<h2><a href="#Optional_overrides">Optional overrides    </a></h2>
+<h2><a href="#Optional_overrides">Optional overrides        </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:_marshall">BaseDao:_marshall (t)</a></td>
@@ -335,7 +391,7 @@
     <td class="summary">Constructor.</td>
   </tr>
 </table>
-<h2><a href="#Private_methods">Private methods    </a></h2>
+<h2><a href="#Private_methods">Private methods        </a></h2>
 <table class="function_list">
   <tr>
     <td class="name"><a href="#BaseDao:_close_session">BaseDao:_close_session (session)</a></td>
@@ -364,13 +420,21 @@
 </table>
 
 
-<h2 class="section-header has-description"><a name="Public_interface">Public interface    </a></h2>
+<h2 class="section-header has-description"><a name="Public_interface">Public interface        </a></h2>
 
 <div class="section-description">
 
 
 
+
+
+
+
 Public methods developers can use in Kong core or in any plugin.
+
+
+
+
 
 
 
@@ -385,8 +449,20 @@ Public methods developers can use in Kong core or in any plugin.
     
     
     
+    
+    
+    
+    
     Bind a table of arguments to a query depending on the entity's schema,
  and then execute the query via <strong>:_execute()</strong>.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -403,6 +479,10 @@ Public methods developers can use in Kong core or in any plugin.
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">args_to_bind</code>
@@ -411,11 +491,19 @@ Public methods developers can use in Kong core or in any plugin.
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">options</code>
           <span class="types"><span class="type">stable</span></span>
           Options to pass to lua-cassandra's :execute()
+        
+        
+        
+        
         
         
         
@@ -428,7 +516,15 @@ Public methods developers can use in Kong core or in any plugin.
         
         
         
+        
+        
+        
+        
         return values of _execute()
+      
+      
+      
+      
       
       
       
@@ -446,14 +542,22 @@ Public methods developers can use in Kong core or in any plugin.
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Children_DAOs_interface">Children DAOs interface    </a></h2>
+<h2 class="section-header has-description"><a name="Children_DAOs_interface">Children DAOs interface        </a></h2>
 
 <div class="section-description">
 
 
 
+
+
+
+
 Those methds are to be used in any child DAO and will perform the named operations
  the entity they represent.
+
+
+
+
 
 
 
@@ -468,7 +572,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Retrieve the number of rows in the related column family matching a possible 'WHERE' clause.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -485,11 +601,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. See lua-cassandra's related <strong>:execute()</strong> option.
+        
+        
+        
+        
         
         
         
@@ -504,6 +628,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
@@ -511,10 +639,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><span class="type">boolean</span></span>
         A boolean indicating if the 'ALLOW FILTERING' clause was needed by the query
+      
+      
+      
+      
       
       
       
@@ -534,7 +670,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Delete the row with PRIMARY KEY from the configured table (<strong>_table</strong> attribute).
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -550,6 +698,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -561,10 +713,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the query execution or the cascade delete hook
+      
+      
+      
+      
       
       
       
@@ -584,8 +744,24 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Truncate the table related to this DAO (the <strong>_table</strong> attribute).
  Only executes a 'TRUNCATE' query using the <a href="../modules/kong.dao.cassandra.base_dao.html#BaseDao:execute">execute</a> method.
+
+
+    
+
+
+    
+
+
+    
+
+
+    
 
 
     
@@ -603,7 +779,15 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         Return values of execute()
+      
+      
+      
+      
       
       
       
@@ -627,7 +811,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Retrieve a page of rows from the related column family.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -644,11 +840,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. See lua-cassandra's related <strong>:execute()</strong> option.
+        
+        
+        
+        
         
         
         
@@ -661,7 +865,15 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         return values of find<em>by</em>keys()
+      
+      
+      
+      
       
       
       
@@ -685,8 +897,20 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Retrieve a set of rows from the given columns/value table with a given
  'WHERE' clause.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -703,6 +927,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">page_size</code>
@@ -711,11 +939,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">paging_state</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           Start page from given offset. See lua-cassandra's related <strong>:execute()</strong> option.
+        
+        
+        
+        
         
         
         
@@ -730,6 +966,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
@@ -737,10 +977,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><span class="type">boolean</span></span>
         A boolean indicating if the 'ALLOW FILTERING' clause was needed by the query
+      
+      
+      
+      
       
       
       
@@ -760,7 +1008,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Retrieve a row at given PRIMARY KEY.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -777,6 +1037,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -788,10 +1052,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the execution
+      
+      
+      
+      
       
       
       
@@ -811,8 +1083,20 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Insert a row in the defined column family (defined by the <strong>_table</strong> attribute).
  Perform schema validation, 'UNIQUE' checks, 'FOREIGN' checks.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -828,6 +1112,10 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -839,10 +1127,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the execution
+      
+      
+      
+      
       
       
       
@@ -867,8 +1163,20 @@ Those methds are to be used in any child DAO and will perform the named operatio
     
     
     
+    
+    
+    
+    
     Update an entity: find the row with the given PRIMARY KEY and update the other values
  Performs schema validation, 'UNIQUE' and 'FOREIGN' checks.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -885,11 +1193,19 @@ Those methds are to be used in any child DAO and will perform the named operatio
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">full</code>
           <span class="types"><span class="type">boolean</span></span>
           If <strong>true</strong>, set to NULL any column not in the <code>t</code> parameter, such as a PUT query would do for example.
+        
+        
+        
+        
         
         
         
@@ -904,10 +1220,18 @@ Those methds are to be used in any child DAO and will perform the named operatio
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the execution
+      
+      
+      
+      
       
       
       
@@ -926,13 +1250,21 @@ Those methds are to be used in any child DAO and will perform the named operatio
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Optional_overrides">Optional overrides    </a></h2>
+<h2 class="section-header has-description"><a name="Optional_overrides">Optional overrides        </a></h2>
 
 <div class="section-description">
 
 
 
+
+
+
+
 Can be optionally overriden by a child DAO.
+
+
+
+
 
 
 
@@ -947,10 +1279,22 @@ Can be optionally overriden by a child DAO.
     
     
     
+    
+    
+    
+    
     Marshall an entity.
  Executed on each entity insertion to serialize
  eventual properties for Cassandra storage.
  Does nothing by default, must be overriden for entities where marshalling applies.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -967,6 +1311,10 @@ Can be optionally overriden by a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -975,6 +1323,10 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Serialized entity.
+      
+      
+      
+      
       
       
       
@@ -998,10 +1350,22 @@ Can be optionally overriden by a child DAO.
     
     
     
+    
+    
+    
+    
     Unmarshall an entity.
  Executed each time an entity is being retrieved from Cassandra
  to deserialize properties serialized by <code>:_mashall()</code>,
  Does nothing by default, must be overriden for entities where marshalling applies.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1018,6 +1382,10 @@ Can be optionally overriden by a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1026,6 +1394,10 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Deserialized entity.
+      
+      
+      
+      
       
       
       
@@ -1049,9 +1421,21 @@ Can be optionally overriden by a child DAO.
     
     
     
+    
+    
+    
+    
     Constructor.
  Instanciate a new Cassandra DAO. This method is to be overriden from the
  child class and called once the child class has a schema set.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1067,6 +1451,10 @@ Can be optionally overriden by a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1075,6 +1463,10 @@ Can be optionally overriden by a child DAO.
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Instanciated DAO.
+      
+      
+      
+      
       
       
       
@@ -1088,13 +1480,21 @@ Can be optionally overriden by a child DAO.
   </dd>
 </dl>
 
-<h2 class="section-header has-description"><a name="Private_methods">Private methods    </a></h2>
+<h2 class="section-header has-description"><a name="Private_methods">Private methods        </a></h2>
 
 <div class="section-description">
 
 
 
+
+
+
+
 For internal use in the base_dao itself or advanced usage in a child DAO.
+
+
+
+
 
 
 
@@ -1109,9 +1509,21 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Close the given opened session.
  Will try to put the session in the socket pool for re-use if supported
  by the current phase.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1128,6 +1540,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1139,6 +1555,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
@@ -1146,10 +1566,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the preparation of the statement
+      
+      
+      
+      
       
       
       
@@ -1169,6 +1597,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Execute a query (internally).
  This method should be called with the proper <strong>args</strong> formatting (as an array). See
  <strong>:execute()</strong> for building this parameter.
@@ -1176,6 +1608,14 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
  current cache.
  Opens a socket, execute the statement, puts the socket back into the
  socket pool and returns a parsed result.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1191,11 +1631,19 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">args</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           (Optional) Arguments to the query, as an array. Simply passed to lua-cassandra's :execute()
+        
+        
+        
+        
         
         
         
@@ -1207,11 +1655,19 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">keyspace</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
           (Optional) Override the keyspace for this query if specified.
+        
+        
+        
+        
         
         
         
@@ -1226,10 +1682,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         An error if any during the whole execution (sockets/query execution)
+      
+      
+      
+      
       
       
       
@@ -1255,7 +1719,19 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Open a session on the configured keyspace.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1272,6 +1748,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1283,10 +1763,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any
+      
+      
+      
+      
       
       
       
@@ -1306,8 +1794,20 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Perform "foreign" check on a column.
  Check all fields marked with <code>foreign</code> in the schema have an existing parent row.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1324,6 +1824,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1335,10 +1839,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A key/value table of all columns (as keys) not having a parent row.
+      
+      
+      
+      
       
       
       
@@ -1358,9 +1870,21 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Perform "unique" check on a column.
  Check that all fields marked with <code>unique</code> in the schema do not already exist
  with the same value.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1377,11 +1901,19 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">is_update</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, we ignore an identical value if the row containing it is the one we are trying to update.
+        
+        
+        
+        
         
         
         
@@ -1396,10 +1928,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A key/value table of all columns (as keys) having values already in the database.
+      
+      
+      
+      
       
       
       
@@ -1419,9 +1959,21 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     
     
     
+    
+    
+    
+    
     Get a prepared statement from the statements cache or prepare it (and thus insert it in the cache).
  The cache is unique for each Cassandra contact_point (base on the host and port).
  The statement's cache key will be the plain string query representation.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -1438,6 +1990,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -1449,6 +2005,10 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -1456,10 +2016,18 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Error if any during the query preparation
+      
+      
+      
+      
       
       
       
@@ -1485,7 +2053,7 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
     <section class="section subscribe-section" id="newsletter">
   <div class="container">
     <header class="section-header">
-      <h4>Keep up with the latest features</h4>
+      <h4>跟踪最新特性</h4>
     </header>
 
 
@@ -1496,7 +2064,7 @@ For internal use in the base_dao itself or advanced usage in a child DAO.
         <div class="bounce3"></div>
       </div>
 
-      <div class="alert alert-success" role="alert">Thank You!</div>
+      <div class="alert alert-success" role="alert">谢谢!</div>
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>

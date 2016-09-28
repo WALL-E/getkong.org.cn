@@ -107,6 +107,10 @@
           
           
           
+          
+          
+          
+          
           Version 0.9.x
           <em>(latest)</em>
           <span class="caret"></span>
@@ -153,7 +157,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.5.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -173,7 +189,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.6.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -193,7 +221,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.7.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -213,7 +253,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.8.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -266,7 +318,7 @@
     <div class="content">
 <h1><code>kong.tools.responses</code></h1>
 <p>Kong helper methods to send HTTP responses to clients.</p>
-<p><p>    Can be used in the proxy (core/resolver), plugins or Admin API.
+<p><p>        Can be used in the proxy (core/resolver), plugins or Admin API.
  Most used HTTP status codes and responses are implemented as helper methods.</p>
 
 
@@ -317,11 +369,23 @@
     
     
     
+    
+    
+    
+    
     Send a response with any status code or body,
  Not all status codes are available as sugar methods, this function can be
  used to send any response.
  If the <code>status_code</code> parameter is in the 5xx range, it is expectde that the <code>content</code> parameter be the error encountered. It will be logged and the response body will be empty. The user will just receive a 500 status code.
  Will call <a href="https://github.com/openresty/lua-nginx-module#ngxsay">ngx.say</a> and <a href="https://github.com/openresty/lua-nginx-module#ngxexit">ngx.exit</a>, terminating the current context.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -338,10 +402,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">body</code>
           A string or table which will be the body of the sent response. If table, the response will be encoded as a JSON object. If string, the response will be a JSON object and the string will be contained in the <code>message</code> property. Except if the <code>raw</code> parameter is set to <code>true</code>.
+        
+        
+        
+        
         
         
         
@@ -353,11 +425,19 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">headers</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Response headers to send.
+        
+        
+        
+        
         
         
         
@@ -370,7 +450,15 @@
         
         
         
+        
+        
+        
+        
         ngx.exit (Exit current context)
+      
+      
+      
+      
       
       
       
@@ -401,10 +489,22 @@
     
     
     
+    
+    
+    
+    
     Define the most common HTTP status codes for sugar methods.
  Each of those status will generate a helper method (sugar)
  attached to this exported module prefixed with <code>send_</code>.
  Final signature of those methods will be <code>send_&lt;status_code_key&gt;(message, raw, headers)</code>. See <a href="../modules/kong.tools.responses.html#send">send</a> for more details on those parameters.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -420,10 +520,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_CREATED</code>
           201 Created
+        
+        
+        
+        
         
         
         
@@ -434,10 +542,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_BAD_REQUEST</code>
           400 Bad Request
+        
+        
+        
+        
         
         
         
@@ -448,10 +564,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_FORBIDDEN</code>
           403 Forbidden
+        
+        
+        
+        
         
         
         
@@ -462,10 +586,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_METHOD_NOT_ALLOWED</code>
           405 Method Not Allowed
+        
+        
+        
+        
         
         
         
@@ -476,6 +608,10 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_UNSUPPORTED_MEDIA_TYPE</code>
@@ -483,10 +619,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">HTTP_INTERNAL_SERVER_ERROR</code>
           Internal Server Error
+        
+        
+        
+        
         
         
         
@@ -519,7 +663,7 @@
     <section class="section subscribe-section" id="newsletter">
   <div class="container">
     <header class="section-header">
-      <h4>Keep up with the latest features</h4>
+      <h4>跟踪最新特性</h4>
     </header>
 
 
@@ -530,7 +674,7 @@
         <div class="bounce3"></div>
       </div>
 
-      <div class="alert alert-success" role="alert">Thank You!</div>
+      <div class="alert alert-success" role="alert">谢谢!</div>
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>

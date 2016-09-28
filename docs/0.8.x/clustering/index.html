@@ -108,7 +108,19 @@
           
           
           
+          
+          
+          
+          
           Version 0.8.x
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           
@@ -127,7 +139,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.2.0-2
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -145,7 +169,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.2.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -163,7 +199,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.3.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -181,7 +229,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.4.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -199,7 +259,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.5.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -217,7 +289,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.6.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -235,7 +319,19 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.7.x
+                  
+                
+                  
+                
+                  
+                
+                  
+                
                   
                 
                   
@@ -255,8 +351,16 @@
                   
                   
                   
+                  
+                  
+                  
+                  
                   0.9.x
                   (latest)
+                
+                
+                
+                
                 
                 
                 
@@ -620,6 +724,10 @@
         
         
         
+        
+        
+        
+        
         </div>
         
 
@@ -665,7 +773,7 @@
   <img src="/assets/images/docs/clustering.png" style="height: 400px"/>
 </center></p>
 
-<p>To make sure every Kong node can process requests properly, each node must point to the same datastore so that they can share the same data. This means for example that APIs, Consumers and Plugins created by a Kong node will also be available to other Kong nodes that are pointing to the same datastore.    </p>
+<p>To make sure every Kong node can process requests properly, each node must point to the same datastore so that they can share the same data. This means for example that APIs, Consumers and Plugins created by a Kong node will also be available to other Kong nodes that are pointing to the same datastore.        </p>
 
 <p>By doing so it doesn't matter which Kong node is being requested, as long as they all point to the same datastore every node will be able to retrieve the same data and thus process requests in the same way.</p>
 
@@ -685,7 +793,7 @@
 
 <p>To understand why a Kong Cluster is needed, we need to spend a few words on how Kong interacts with the datastore.</p>
 
-<p>Every time a new incoming API requests hits a Kong server, Kong loads some data from the datastore to understand how to proxy the request, load any associated plugin, authenticate the Consumer, and so on. Doing this on every request would be very expensive in terms of performance, because Kong would need to communicate with the datastore on every request and this would be extremely inefficient.    </p>
+<p>Every time a new incoming API requests hits a Kong server, Kong loads some data from the datastore to understand how to proxy the request, load any associated plugin, authenticate the Consumer, and so on. Doing this on every request would be very expensive in terms of performance, because Kong would need to communicate with the datastore on every request and this would be extremely inefficient.        </p>
 
 <p>To avoid querying the datastore every time, Kong tries to cache as much data as possible locally in-memory after the first time it has been requested. Because a local in-memory lookup is tremendously faster than communicating with the datastore every time, this allows Kong to have a good performance on every request.</p>
 
@@ -713,7 +821,7 @@
 
 <ul>
 <li>Using the <a href="/docs/0.8.x/cli/#cluster"><code>kong cluster force-leave</code></a> CLI command</li>
-<li>Using the <a href="/docs/0.8.x/admin-api/#forcibly-remove-a-node">API</a>.    </li>
+<li>Using the <a href="/docs/0.8.x/admin-api/#forcibly-remove-a-node">API</a>.        </li>
 </ul>
 
 <p>Check the <a href="#node-failures">Node Failures</a> paragraph for more info.</p>
@@ -770,7 +878,7 @@
     <section class="section subscribe-section" id="newsletter">
   <div class="container">
     <header class="section-header">
-      <h4>Keep up with the latest features</h4>
+      <h4>跟踪最新特性</h4>
     </header>
 
 
@@ -781,7 +889,7 @@
         <div class="bounce3"></div>
       </div>
 
-      <div class="alert alert-success" role="alert">Thank You!</div>
+      <div class="alert alert-success" role="alert">谢谢!</div>
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>

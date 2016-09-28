@@ -107,6 +107,10 @@
           
           
           
+          
+          
+          
+          
           Version 0.9.x
           <em>(latest)</em>
           <span class="caret"></span>
@@ -153,7 +157,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.5.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -173,7 +189,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.6.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -193,7 +221,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.7.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -213,7 +253,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.8.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -269,9 +321,9 @@
 <p>An instance of this class is to be instanciated for each entity, and can interact
  with the table representing the entity in the database.</p>
 
-<p>    Instanciations of this class are managed by the DAO Factory.</p>
+<p>        Instanciations of this class are managed by the DAO Factory.</p>
 
-<p>    This class provides an abstraction for various databases (PostgreSQL, Cassandra)
+<p>        This class provides an abstraction for various databases (PostgreSQL, Cassandra)
  and is responsible for propagating clustering events related to data invalidation,
  as well as foreign constraints when the underlying database does not support them
  (as with Cassandra).</p>
@@ -327,8 +379,20 @@
     
     
     
+    
+    
+    
+    
     Count the number of rows.
  Count the number of rows matching the given values.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -345,6 +409,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -356,10 +424,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -379,11 +455,23 @@
     
     
     
+    
+    
+    
+    
     Delete a row.
  Delete a row in table related to this instance. Also deletes all rows with a relashionship to the deleted row
  (via foreign key relations). For SQL databases such as PostgreSQL, the underlying implementation
  leverages "FOREIGN KEY" constraints, but for others such as Cassandra, such operations are executed
  manually.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -400,6 +488,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -411,10 +503,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -434,8 +534,20 @@
     
     
     
+    
+    
+    
+    
     Find a row.
  Find a row by its given, mandatory primary key. All other fields are ignored.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -452,6 +564,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -463,10 +579,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -486,8 +610,20 @@
     
     
     
+    
+    
+    
+    
     Find all rows.
  Find all rows in the table, eventually matching the values in the given fields.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -504,6 +640,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -515,10 +655,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -538,8 +686,20 @@
     
     
     
+    
+    
+    
+    
     Find a paginated set of rows.
  Find a pginated set of rows eventually matching the values in the given fields.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -556,6 +716,10 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">page_offset</code>
@@ -563,10 +727,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">page_size</code>
           Size of the page to retrieve (number of rows).
+        
+        
+        
+        
         
         
         
@@ -581,10 +753,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -604,8 +784,20 @@
     
     
     
+    
+    
+    
+    
     Insert a row.
  Insert a given Lua table as a row in the related table.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -622,11 +814,19 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">options</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Options to use for this insertion. (<code>ttl</code>: Time-to-live for this row, in seconds)
+        
+        
+        
+        
         
         
         
@@ -641,10 +841,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -664,9 +872,21 @@
     
     
     
+    
+    
+    
+    
     Instanciate a DAO.
  The DAO Factory is responsible for instanciating DAOs for each entity.
  This method is only documented for clarity.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -682,10 +902,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">model_mt</code>
           The related model metatable. Such metatables contain, among other things, validation methods.
+        
+        
+        
+        
         
         
         
@@ -696,6 +924,10 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">constraints</code>
@@ -703,10 +935,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">events_handler</code>
           Instance of the events propagation class, used to propagate data invalidation events through the cluster.
+        
+        
+        
+        
         
         
         
@@ -719,7 +959,15 @@
         
         
         
+        
+        
+        
+        
         self
+      
+      
+      
+      
       
       
       
@@ -739,10 +987,22 @@
     
     
     
+    
+    
+    
+    
     Update a row.
  Update a row in the related table. Performe a partial update by default (only fields in <code>tbl</code> will)
  be updated. If asked, can perform a "full" update, replacing the entire entity (assuming it is valid)
  with the one specified in <code>tbl</code> at once.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -759,10 +1019,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">filter_keys</code>
           A table containing the values to select the row to be updated.
+        
+        
+        
+        
         
         
         
@@ -771,6 +1039,10 @@
           <code class="parameter">options</code>
           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Options to use for this update. (<code>full</code>: performs a full update of the entity).
+        
+        
+        
+        
         
         
         
@@ -785,10 +1057,18 @@
       
       
       
+      
+      
+      
+      
       </li>
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         err If an error occured, a table describing the issue.
+      
+      
+      
+      
       
       
       
@@ -814,7 +1094,7 @@
     <section class="section subscribe-section" id="newsletter">
   <div class="container">
     <header class="section-header">
-      <h4>Keep up with the latest features</h4>
+      <h4>跟踪最新特性</h4>
     </header>
 
 
@@ -825,7 +1105,7 @@
         <div class="bounce3"></div>
       </div>
 
-      <div class="alert alert-success" role="alert">Thank You!</div>
+      <div class="alert alert-success" role="alert">谢谢!</div>
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>

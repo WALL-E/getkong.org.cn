@@ -107,6 +107,10 @@
           
           
           
+          
+          
+          
+          
           Version 0.9.x
           <em>(latest)</em>
           <span class="caret"></span>
@@ -153,7 +157,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.5.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -173,7 +189,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.6.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -193,7 +221,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.7.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -213,7 +253,19 @@
                     
                     
                     
+                    
+                    
+                    
+                    
                     0.8.x
+                    
+                  
+                    
+                  
+                    
+                  
+                    
+                  
                     
                   
                     
@@ -333,8 +385,20 @@
     
     
     
+    
+    
+    
+    
     Add an error message to a key/value table.
  If the key already exists, a sub table is created with the original and the new value.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -350,6 +414,10 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">k</code>
@@ -357,10 +425,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">v</code>
           Value of the error
+        
+        
+        
+        
         
         
         
@@ -373,7 +449,15 @@
         
         
         
+        
+        
+        
+        
         The <code>errors</code> table with the new error inserted.
+      
+      
+      
+      
       
       
       
@@ -393,7 +477,19 @@
     
     
     
+    
+    
+    
+    
     Concatenates lists into a new table.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -423,8 +519,20 @@
     
     
     
+    
+    
+    
+    
     Deep copies a table into a new table.
  Tables used as keys are also deep copied, as are metatables
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -440,6 +548,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -449,7 +561,15 @@
         
         
         
+        
+        
+        
+        
         Returns a copy of the input table
+      
+      
+      
+      
       
       
       
@@ -469,10 +589,22 @@
     
     
     
+    
+    
+    
+    
     Encode a Lua table to a querystring
  Tries to mimic ngx_lua's <code>ngx.encode_args</code>, but also percent-encode querystring values.
  Supports multi-value query args, boolean values.
  It also supports encoding for bodies (only because it is used in http_client for specs.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -489,11 +621,19 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">raw</code>
           <span class="types"><span class="type">boolean</span></span>
           If true, will not percent-encode any key/value and will ignore special boolean rules.
+        
+        
+        
+        
         
         
         
@@ -505,6 +645,10 @@
       <li>
         <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         A valid querystring (without the prefixing '?')
+      
+      
+      
+      
       
       
       
@@ -527,7 +671,23 @@
     
     
     
+    
+    
+    
+    
     Retrieves the hostname of the local machine
+
+
+    
+
+
+    
+
+
+    
+
+
+    
 
 
     
@@ -545,7 +705,15 @@
         
         
         
+        
+        
+        
+        
         string  The hostname
+      
+      
+      
+      
       
       
       
@@ -565,8 +733,20 @@
     
     
     
+    
+    
+    
+    
     Checks if a table is an array and not an associative array.
  <strong>* NOTE *</strong> string-keys containing integers are considered valid array entries!
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -582,6 +762,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -591,7 +775,15 @@
         
         
         
+        
+        
+        
+        
         Returns <code>true</code> if the table is an array, <code>false</code> otherwise
+      
+      
+      
+      
       
       
       
@@ -611,9 +803,21 @@
     
     
     
+    
+    
+    
+    
     Try to load a module.
  Will not throw an error if the module was not found, but will throw an error if the
  loading failed for another reason (eg: syntax error).
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -629,6 +833,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -638,7 +846,15 @@
         
         
         
+        
+        
+        
+        
         success A boolean indicating wether the module was found.
+      
+      
+      
+      
       
       
       
@@ -647,7 +863,15 @@
         
         
         
+        
+        
+        
+        
         module The retrieved module.
+      
+      
+      
+      
       
       
       
@@ -667,7 +891,23 @@
     
     
     
+    
+    
+    
+    
     Generates a random unique string
+
+
+    
+
+
+    
+
+
+    
+
+
+    
 
 
     
@@ -685,7 +925,15 @@
         
         
         
+        
+        
+        
+        
         string  The random string (a uuid without hyphens)
+      
+      
+      
+      
       
       
       
@@ -705,7 +953,19 @@
     
     
     
+    
+    
+    
+    
     Checks if a value exists in a table.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -721,10 +981,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">val</code>
           The value to check
+        
+        
+        
+        
         
         
         
@@ -737,7 +1005,15 @@
         
         
         
+        
+        
+        
+        
         Returns <code>true</code> if the table contains the value, <code>false</code> otherwise
+      
+      
+      
+      
       
       
       
@@ -757,8 +1033,20 @@
     
     
     
+    
+    
+    
+    
     Merges two table together.
  A new table is created with a non-recursive copy of the provided tables
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -774,10 +1062,18 @@
         
         
         
+        
+        
+        
+        
         </li>
         <li>
           <code class="parameter">t2</code>
           The second table
+        
+        
+        
+        
         
         
         
@@ -790,7 +1086,15 @@
         
         
         
+        
+        
+        
+        
         The (new) merged table
+      
+      
+      
+      
       
       
       
@@ -810,8 +1114,20 @@
     
     
     
+    
+    
+    
+    
     Calculates a table size.
  All entries both in array and hash part.
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -827,6 +1143,10 @@
         
         
         
+        
+        
+        
+        
         </li>
     </ul>
 
@@ -836,7 +1156,15 @@
         
         
         
+        
+        
+        
+        
         number The size
+      
+      
+      
+      
       
       
       
@@ -862,7 +1190,7 @@
     <section class="section subscribe-section" id="newsletter">
   <div class="container">
     <header class="section-header">
-      <h4>Keep up with the latest features</h4>
+      <h4>跟踪最新特性</h4>
     </header>
 
 
@@ -873,7 +1201,7 @@
         <div class="bounce3"></div>
       </div>
 
-      <div class="alert alert-success" role="alert">Thank You!</div>
+      <div class="alert alert-success" role="alert">谢谢!</div>
 
       <div class="input-group">
         <input type="email" name="email" placeholder="youre@awesome.com" required/>
